@@ -1,0 +1,27 @@
+﻿html, body{
+    overflow-x: hidden;
+}
+body {
+    padding-top: 56px;
+    padding-bottom: 20px;
+}
+
+
+.h-80vh {
+    height: 80vh;
+}
+
+.h-480p{
+    height: 480px;
+}
+
+.img-cover{
+    background-size: cover;
+}
+
+.bg-dark05 {
+    background: rgba(52, 58, 64, 0.5)
+}
+.bg-dark08 {
+    background: rgba(52, 58, 64, 0.8)
+}
