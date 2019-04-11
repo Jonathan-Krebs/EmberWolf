@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Animotion</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="body-content">
+        @RenderBody()
+    </div>
+
+   
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @*<script>
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= 600) {
+                    if (!$('#Header').hasClass('Header-Fixed')) {
+                        $('#Header').addClass('Header-Fixed').css('top', '-100px');
+                        setTimeout(function () {
+                            $('#Header').addClass('Transition04').css('top', '-0px');
+                        }, 50)
+                    }
+                }
+                else {
+                    if ($('#Header').hasClass('Header-Fixed')) {
+                        $('#Header').css('top', '-100px');
+                        setTimeout(function () {
+                            $('#Header').removeClass('Header-Fixed').removeClass('Transition04').css('top', '-0px');
+                        }, 200)
+                    }
+                }
+            });
+        });
+    </script>*@
+
+    <script>
+
+        // Sticky navbar
+        // =========================
+        $(document).ready(function () {
+            $('.carousel').carousel()
+            // Custom function which toggles between sticky class (is-sticky)
+            var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
+                var stickyHeight = sticky.outerHeight();
+                var stickyTop = stickyWrapper.offset().top;
+                if (scrollElement.scrollTop() >= stickyTop) {
+                    if (!sticky.hasClass('is-sticky')) {
+                        stickyWrapper.height(stickyHeight);
+                        sticky.addClass("is-sticky");
+                        
+                    }
+                }
+                else {
+                    sticky.removeClass("is-sticky");
+                    stickyWrapper.height('auto');
+                }
+            };
+
+            // Find all data-toggle="sticky-onscroll" elements
+            $('[data-toggle="sticky-onscroll"]').each(function () {
+                var sticky = $(this);
+                var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+                sticky.before(stickyWrapper);
+                sticky.addClass('sticky');
+
+                // Scroll & resize events
+                $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+                    stickyToggle(sticky, stickyWrapper, $(this));
+                });
+
+                // On page load
+                stickyToggle(sticky, stickyWrapper, $(window));
+            });
+        });
+    </script>
+</body>
+</html>

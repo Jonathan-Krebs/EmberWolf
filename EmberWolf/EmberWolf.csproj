@@ -195,6 +195,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -213,11 +214,30 @@
     <Content Include="Content\Bootstrap\bootstrap-reboot.min.css" />
     <Content Include="Content\Bootstrap\bootstrap.css" />
     <Content Include="Content\Bootstrap\bootstrap.min.css" />
-    <Content Include="Content\Media\Images\Suit-1.jpg" />
-    <Content Include="Content\Media\Images\Suit-2.jpg" />
-    <Content Include="Content\Media\Images\Suit-3.jpg" />
+    <Content Include="Content\Media\Images\Kea.jpg" />
+    <Content Include="Content\Media\Images\Misc\Avatar.png" />
+    <Content Include="Content\Media\Images\Portfolio\img-1.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\Img-10.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\img-11.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\img-12.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\img-13.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\Img-2.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\Img-3.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\Img-4.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\Img-5.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\Img-6.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\Img-7.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\Img-8.jpg" />
+    <Content Include="Content\Media\Images\Portfolio\Img-9.jpg" />
+    <Content Include="Content\Media\Images\Tiles\Chicken.png" />
+    <Content Include="Content\Media\Images\Tiles\Chimpanzee.png" />
+    <Content Include="Content\Media\Images\Tiles\Cow.png" />
+    <Content Include="Content\Media\Images\Tiles\GoldenRetriever.png" />
+    <Content Include="Content\Media\Images\Tiles\Horse.png" />
+    <Content Include="Content\Media\Images\Tiles\Sheep.png" />
     <Content Include="Content\simple-line-icons.css" />
     <Content Include="Content\Fonts\Simple-Line-Icons.svg" />
+    <Content Include="Content\Classes.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -267,7 +287,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -289,9 +308,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Portfolio\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout-Portfolio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Media\Video\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

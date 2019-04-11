@@ -117,3 +117,4 @@ C:\Users\Armadaeus\Documents\GitHub\EmberWolf\EmberWolf\obj\Debug\EmberWolf.cspr
 C:\Users\Armadaeus\Documents\GitHub\EmberWolf\EmberWolf\obj\Debug\EmberWolf.csproj.CopyComplete
 C:\Users\Armadaeus\Documents\GitHub\EmberWolf\EmberWolf\obj\Debug\EmberWolf.dll
 C:\Users\Armadaeus\Documents\GitHub\EmberWolf\EmberWolf\obj\Debug\EmberWolf.pdb
+C:\Users\Armadaeus\Documents\GitHub\EmberWolf\EmberWolf\obj\Debug\EmberWolf.csprojAssemblyReference.cache

@@ -3,20 +3,23 @@
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
 
+        <div class="py-2 d-none d-md-inline-block">
+            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Research", routeValues: null, htmlAttributes: new { title = "Research" })
+        </div>
 
-        <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-
+        <div class="py-2 d-none d-md-inline-block">
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        </div>
     }
 }
 else
 {
-
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-
+    <div class="py-2 d-none d-md-inline-block">
+    @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+    </div>
+    <div class="py-2 d-none d-md-inline-block">
+    @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+    </div>
 }

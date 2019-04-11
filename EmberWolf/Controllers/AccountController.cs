@@ -79,6 +79,10 @@ namespace EmberWolf.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    if(returnUrl == null)
+                    {
+                        returnUrl = "/Research/";
+                    }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");

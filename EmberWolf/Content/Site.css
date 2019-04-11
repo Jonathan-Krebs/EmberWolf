@@ -1,27 +1,72 @@
-﻿html, body{
+﻿/*Tag*/
+html, body{
     overflow-x: hidden;
 }
 body {
-    padding-top: 56px;
     padding-bottom: 20px;
 }
 
+section{
+    padding: 50px 0px;
+}
 
+/*Transition*/
+.Transition02{
+    transition: 0.2s;
+}
+
+.Transition04 {
+    transition: 0.4s;
+}
+
+/*Width*/
+.w-150px {
+    width: 150px;
+}
+
+@media (min-width: 1400px) {
+    .container:not(.sm) {
+        max-width: 1340px;
+    }
+}
+
+/*Height*/
 .h-80vh {
     height: 80vh;
 }
-
+.h-100vh {
+    height: 100vh;
+}
 .h-480p{
     height: 480px;
 }
 
+/*img*/
 .img-cover{
+    background-position: center;
     background-size: cover;
 }
+.img-fixed{
+    background-attachment: fixed;
+}
 
+/*Background*/
 .bg-dark05 {
     background: rgba(52, 58, 64, 0.5)
 }
 .bg-dark08 {
     background: rgba(52, 58, 64, 0.8)
 }
+
+/*Alignment*/
+.Vertical-Align-Parent {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+    .Vertical-Align-Parent .Vertical-Align {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }

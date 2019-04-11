@@ -25,6 +25,7 @@ namespace EmberWolf
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/Bootstrap/bootstrap.css",
                       "~/Content/simple-line-icons.css",
+                      "~/Content/classes.css",
                       "~/Content/site.css"));
         }
     }

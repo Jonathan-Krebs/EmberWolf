@@ -13,16 +13,19 @@ namespace EmberWolf.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Battery()
         {
-            ViewBag.Message = "Your application description page.";
+            return View();
+        }
+
+        public ActionResult NeuralNet()
+        {
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Results()
         {
-            ViewBag.Message = "Your contact page.";
 
             return View();
         }
