@@ -1,0 +1,302 @@
+﻿@{
+    ViewBag.Title = "Jon Krebs";
+    Layout = "~/Views/Shared/_Layout-Portfolio.cshtml";
+    <style>
+        body, html {
+            overflow: hidden;
+        }
+    </style>
+}
+
+    <main role="main" class="page-loading">
+
+        <nav class="d-flex is-sticky" data-toggle="sticky-onscroll">
+            <div class="nav-body loading">
+                <div class="nav-body-content container">
+                    <div class="mr-4">
+                        <img class="nav-avatar" src="~/Content/Media/Images/Misc/Avatar.png" />
+                    </div>
+                    <div class="Vertical-Align-Parent mr-4 w-full">
+                        <div class="Vertical-Align flex">
+                            <div>
+                                <h2 class="nav-title">Jon Krebs @*<span class="nav-title-hidden">Maker</span>*@</h2>
+                                <h5 class="nav-subtitle">Maker</h5>
+                            </div>
+                            <div class="flex right nav-links">
+                                <h6 class="mr-4"><a href="/Home">Resume</a></h6>
+                                <h6><a href="#"class="active">Cover Letter</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress mt-4" style="height: 3px;" id="LoaderProgress">
+                    <div class="progress-bar" style="transition: 1s; width: 0;"></div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="styled-scroll pb-0">
+            <div class="container sm">
+                <div>
+                    <div class="d-flex mb-5">
+                        <div class="mr-4">
+                            <h3 class="icon-anchor"></h3>
+                        </div>
+                        <div>
+                            <h1>Cover Letter For Contoso Limited</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque urna nisl, mollis sed rhoncus a, luctus ut eros. Donec feugiat dignissim risus, ut dapibus quam sodales eu. Sed eget rutrum diam. Proin imperdiet porta orci, et commodo erat sollicitudin non. Nulla facilisi. Nullam facilisis commodo risus molestie vulputate. Fusce maximus, odio non maximus commodo, est velit varius nibh, vitae semper quam turpis sit amet diam. Duis nibh mauris, lobortis vel justo malesuada, fermentum maximus elit. Donec semper vel nisl sed dignissim. Cras sagittis sagittis urna.
+                                <br /><br />
+                                Donec lacinia vestibulum interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam mollis tincidunt urna, at posuere sem congue quis. Sed tincidunt vulputate velit dictum fringilla. Phasellus blandit cursus facilisis. Quisque tincidunt ornare urna, eu laoreet enim malesuada aliquam. Donec diam neque, ultrices at molestie ac, condimentum et est. Nulla nulla purus, aliquam nec euismod eu, facilisis eget dui.
+                                <br /><br />
+                                Nullam consectetur quam sed aliquam efficitur. Sed consequat lacinia arcu, in elementum sapien dictum vel. Morbi laoreet, lorem malesuada tincidunt pretium, lorem nibh bibendum nulla, nec gravida arcu diam semper sem. Cras non elit sagittis elit venenatis placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam tincidunt erat ipsum, a placerat diam efficitur et. Nullam eros libero, pharetra non pretium ac, fermentum vitae dolor. Nam pellentesque, urna vel volutpat dignissim, ante ipsum ultrices purus, nec congue massa nibh vel odio. Vivamus dictum nisi sit amet velit elementum consectetur. Aenean eget vestibulum nibh. Quisque libero lorem, consequat a magna sed, scelerisque facilisis risus. Praesent sollicitudin mauris tortor. Donec auctor ante quis justo vestibulum, et rhoncus ante rhoncus. Etiam quis eros ut odio sodales bibendum. Nullam a sapien sapien. Ut sollicitudin, massa vitae porttitor eleifend, arcu ipsum consequat justo, sit amet ultricies purus massa non elit.
+                                <br /><br />
+                                Maecenas efficitur iaculis ante, ut rutrum purus mattis sed. Nam faucibus, nunc vel pulvinar rhoncus, nisl diam ornare arcu, quis sodales elit mauris quis ex. Donec ac interdum nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque nibh tortor, eleifend ut magna quis, vulputate ullamcorper magna. Nunc laoreet facilisis libero nec lobortis. Proin eros tortor, imperdiet nec tellus id, ullamcorper gravida nulla. Maecenas facilisis volutpat placerat. Sed non tristique tellus, et porta massa. Aliquam pretium ultricies dictum. Suspendisse sed pharetra augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam ac sem magna. Sed neque magna, egestas quis posuere ac, elementum sit amet justo. Nulla molestie placerat diam egestas blandit.
+                                <br /><br />
+                                Nam nec purus porta, laoreet leo a, tincidunt dui. Aliquam id sagittis turpis. Curabitur et massa volutpat, finibus quam facilisis, vehicula odio. Maecenas vitae urna lacinia, ultricies nunc id, pulvinar nulla. Sed condimentum felis ut lectus dictum lacinia. Nam arcu lorem, fermentum vestibulum auctor eget, venenatis vel enim. Donec vitae convallis ante, eu aliquam urna. Fusce faucibus tellus non neque egestas dictum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="bg-dark text-white">
+                <div class="container">
+                    <span>Built with Love By OnePage</span>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+<div class="modal fade lightbox" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="lightboxmodal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-wide">
+            <div class="modal-header">
+                <div class="w-full">
+                    <div class="flex">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Series title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <p class="m-0">Overview about what this series of work is about.</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                @* Add in a carousel for different images in this series of work *@
+                <div class="row">
+                    <div class="col-sm-8">
+                        <img class="mw-100" src="~/Content/Media/Images/Portfolio/img-1.jpg" />
+                    </div>
+                    <div class="col-sm-4">
+                        <h6>Piece Title</h6>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe Photoshop CS 2</li>
+                            <li>Adobe InDesign</li>
+                        </ul>
+                        <p>
+                            This piece demonstrates something great about me and here are the words I would like to use to describe waht it is and how I made it.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<div class="carousel slide" id="PortfolioCarousel" data-ride="carousel">
+        <div class="carousel-inner pb-4">
+            <div class="carousel-item active">
+
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-6.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-7.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-8.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-9.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-10.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-11.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-12.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-13.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#PortfolioCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#PortfolioCarousel" data-slide-to="1"></li>
+            <li data-target="#PortfolioCarousel" data-slide-to="2"></li>
+        </ol>
+    </div>*@
+
+
+
+
+@section Scripts{
+    <script src="~/Scripts/Plugins/Scrollify/Scrollify.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.nav-body.loading').removeClass('loading');
+                setTimeout(function () {
+                    $('#LoaderProgress').find('.progress-bar').css('width', '100%');
+                    setTimeout(function () {
+                        $('#LoaderProgress').slideUp(200);
+                        setTimeout(function () {
+                            $('main.page-loading').removeClass('page-loading');
+                        }, 1200)
+                    }, 1200)
+                }, 600)
+            }, 600)
+            var Scrolling = false;
+            $(window).bind('mousewheel', function (e) {
+
+                var elm = $('section.active')
+                if ($(elm).length != 0 && !Scrolling) {
+                    var ScrollPosition = CheckScrollPosition(elm);
+                    if (e.originalEvent.wheelDelta / 120 > 0) { // up
+                        if (ScrollPosition == 2 || ScrollPosition == 0) { // top of div;
+                            var scrollTo = $(elm).prev('section');
+                            if ($(scrollTo).length != 0) { //prev elm
+                                ScrollToSection(scrollTo)
+                            }
+                        }
+                    }
+                    else { // down
+                        if (ScrollPosition == 1 || ScrollPosition == 0) { // bottom of div;
+                            var scrollTo = $(elm).next('section');
+                            if ($(scrollTo).length != 0) { //next elm
+                                ScrollToSection(scrollTo)
+                            }
+                        }
+                    }
+                }
+
+            });
+        });
+
+        function ScrollToSection(elm) {
+            Scrolling = true;
+            $('section.active').removeClass('active');
+            $('html, body').animate({
+                scrollTop: $(elm).offset().top
+            }, 1000);
+
+            setTimeout(function () {
+                $(elm).addClass('active');
+                Scrolling = false;
+            }, 1000)
+        }
+
+        function CheckScrollPosition(elm) {
+            var scrollTop = $(elm).scrollTop();
+            var windowHeight = window.innerHeight;
+            var elmScrollHeight = $(elm)[0].scrollHeight;
+            var Delta = (windowHeight - elmScrollHeight)
+
+            if (scrollTop == 0 && (Delta < 1 && Delta > -1)) {
+                console.log('Top of default section');
+                return 0;
+            }
+            else if ((scrollTop + windowHeight + 2) >= elmScrollHeight) {
+                console.log('End reached');
+                return 1;
+            } else if (scrollTop <= 0) {
+                console.log('Top reached');
+                return 2;
+            } else {
+                return null;
+            }
+        }
+
+
+    </script>
+}

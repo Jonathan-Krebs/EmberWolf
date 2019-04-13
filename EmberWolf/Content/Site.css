@@ -7,8 +7,19 @@ body {
 }
 
 section{
-    padding: 50px 0px;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    transition: 0.2s;
 }
+section:last-of-type{
+    padding-bottom: 0px;
+}
+footer{
+    padding: 12px;
+}
+
 
 /*Transition*/
 .Transition02{
@@ -22,6 +33,10 @@ section{
 /*Width*/
 .w-150px {
     width: 150px;
+}
+
+.w-full {
+    width:100%;
 }
 
 @media (min-width: 1400px) {
@@ -70,3 +85,10 @@ section{
         top: 50%;
         transform: translateY(-50%);
     }
+
+
+
+/*Cursor*/
+.pointer {
+    cursor:pointer;
+}

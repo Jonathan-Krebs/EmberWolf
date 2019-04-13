@@ -13,6 +13,11 @@ namespace EmberWolf.Controllers
             return View();
         }
 
+        public ActionResult CoverLetter()
+        {
+            return View();
+        }
+
         public ActionResult Battery()
         {
             return View();

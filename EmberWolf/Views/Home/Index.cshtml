@@ -1,296 +1,348 @@
 ﻿@{
     ViewBag.Title = "Jon Krebs";
     Layout = "~/Views/Shared/_Layout-Portfolio.cshtml";
+    <style>
+        body, html {
+            overflow: hidden;
+        }
+        #ScrollWheel{
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            right: 50%;
+        }
+        #SectionIndicators {
+            position: fixed;
+            left: 24px;
+            top: 35vh;
+        }
+
+    </style>
 }
 
-<main role="main">
-    <section class="">
-        <div class="w-100 h-80vh img-cover" style="background-image: url('/Content/Media/Images/Kea.jpg'); padding-top: calc((80vh - 150px) / 2)">
-                <nav class="d-flex" data-toggle="sticky-onscroll">
-                    <div class="nav-body">
-                        <div class="nav-body-content">
-                            <div class="mr-4">
-                                <img class="nav-avatar" src="~/Content/Media/Images/Misc/Avatar.png" />
-                            </div>
-                            <div class="Vertical-Align-Parent mr-4">
-                                <div class="Vertical-Align">
-                                    <h2 class="nav-title">Jon Krebs <span class="nav-title-hidden">Web Developer</span></h2>
-                                    <h5 class="nav-subtitle">Web Developer</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-        </div>
-    </section>
+    <main role="main" class="page-loading">
 
-    <section>
-        <div class="container sm">
-            <div class="row">
-                <div class="col-8">
-                    <div class="d-flex mb-5">
-                        <div class="mr-4">
-                            <h3 class="icon-anchor"></h3>
-                        </div>
-                        <div>
-                            <h3>Profile</h3>
-                            <p>asdf</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-5">
-                        <div class="mr-4">
-                            <h3 class="icon-anchor"></h3>
-                        </div>
-                        <div>
-                            <h3>Employment History</h3>
-                            <div class="mb-4 pl-2">
-                                <h4>Web Developer at Trail, Auckland</h4>
-                                <h6>Date and time</h6>
-                                <p>asdfasdfasdf</p>
+        <section id="Intro" class="styled-scroll active">
+            <div class="w-100 img-cover hero" style="background-image: url('/Content/Media/Images/Kea.jpg');">
+                <div class="hero-overlay hero">
+                    <nav class="d-flex" data-toggle="sticky-onscroll">
+                        <div class="nav-body loading">
+                            <div class="nav-body-content container">
+                                <div class="mr-4">
+                                    <img class="nav-avatar" src="~/Content/Media/Images/Misc/Avatar.png" />
+                                </div>
+                                <div class="Vertical-Align-Parent mr-4 w-full">
+                                    <div class="Vertical-Align flex">
+                                        <div>
+                                            <h2 class="nav-title">Jon Krebs @*<span class="nav-title-hidden">Maker</span>*@</h2>
+                                            <h5 class="nav-subtitle">Maker</h5>
+                                        </div>
+                                        @*<div class="flex right nav-links">
+                                            <h6 class="mr-4"><a class="active" href="#">Resume</a></h6>
+                                            <h6><a href="/Home/CoverLetter">Cover Letter</a></h6>
+                                        </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress mt-4" style="height: 3px;" id="LoaderProgress">
+                                <div class="progress-bar" style="transition: 1s; width: 0;"></div>
                             </div>
                         </div>
-                    </div>
+                    </nav>
                 </div>
-                <div class="col-4">
-                    <div class="mb-5">
-                        <h3>Skills</h3>
-                        <div class="mb-4">
-                            <h4>Dreaming</h4>
-                            <div class="progress" style="height: 3px;">
-                                <div class="progress-bar bg-success" style="width: 100%"></div>
+            </div>
+        </section>
+
+        <section id="About-Me" class="styled-scroll pb-0">
+            <div class="container sm">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="d-flex mb-5">
+                            <div class="mr-4">
+                                <h3 class="icon-anchor"></h3>
+                            </div>
+                            <div>
+                                <h3>Profile</h3>
+                                <p>
+                                    I’m looking to find a Challenge and Freedom working on a project I am passionate about to make a difference to the world. I am an experienced Web Developer, and Creative. Self motivated and driven to learn more and experience life. I won’t fit into a cookie cutter job, and that's what I offer.
+                                </p>
                             </div>
                         </div>
-                        <div class="mb-4">
-                            <h4>Idea Generation</h4>
-                            <div class="progress" style="height: 3px;">
-                                <div class="progress-bar bg-success" style="width: 80%"></div>
+                        <div class="d-flex mb-5">
+                            <div class="mr-4">
+                                <h3 class="icon-briefcase"></h3>
+                            </div>
+                            <div>
+                                <h3>Employment History</h3>
+                                <div class="mb-4">
+                                    <h5>Web Developer at <a class="subtle-link" href="https://gettrail.com" target="_blank">Trail</a>, Auckland</h5>
+                                    <h6>September 2017 - Ongoing</h6>
+                                    <p>
+                                        I build a nice CRM system for financial advisers to manage their business more effectively.
+                                    </p>
+                                </div>
+                                <div class="mb-4">
+                                    <h5>Programmer at <a class="subtle-link" href="https://irefi.co.nz" target="_blank">iRefi</a>, Auckland</h5>
+                                    <h6>May 2015 - September 2017</h6>
+                                    <p>
+                                        Worked on building an online lead generation system for a Finance business, then building an in house CRM system
+                                    </p>
+                                </div>
+                                <div class="mb-4">
+                                    <h5>Junior Developer at <a class="subtle-link" href="http://markerdigital.io/" target="_blank">MarkerMetro</a>, Auckland</h5>
+                                    <h6>June 2013 - May 2015</h6>
+                                    <p>
+                                        Quality control and junior development on mobile apps
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="mb-4">
-                            <h4>Web Design</h4>
-                            <div class="progress" style="height: 3px;">
-                                <div class="progress-bar bg-success" style="width: 60%"></div>
+                        <div class="d-flex mb-5">
+                            <div class="mr-4">
+                                <h3 class="icon-graduation"></h3>
+                            </div>
+                            <div>
+                                <h3>Education</h3>
+                                <div class="mb-4">
+                                    <h5>Be Hons Mechanical Engineering at The University of Auckland</h5>
+                                    <h6>January 2014 - September 2017</h6>
+                                </div>
+                                <div class="mb-4">
+                                    <h5>Macleans College</h5>
+                                    <h6>January 2009 - September 2013</h6>
+                                </div>
                             </div>
                         </div>
-                        <div class="mb-4">
-                            <h4>Graphic Design</h4>
-                            <div class="progress" style="height: 3px;">
-                                <div class="progress-bar bg-success" style="width: 70%"></div>
+                        <div class="d-flex mb-5">
+                            <div class="mr-4">
+                                <h3 class="icon-graduation"></h3>
+                            </div>
+                            <div>
+                                <h3>Extra Curricular</h3>
+                                <div class="mb-4">
+                                    <h5>Long distance Running</h5>
+                                    <h6>January 2014 - September 2017</h6>
+                                </div>
+                                <div class="mb-4">
+                                    <h5>Hackathons</h5>
+                                    <h6>January 2009 - September 2013</h6>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mb-5">
-                        <h3>Links</h3>
-                        <ul class="list-unstyled m-0">
-                            <li class="list-item">
-                                <a>
-                                    <span class="badge badge-info">
-                                        <span class="icon-social-facebook"></span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-item">
-                                <a>
-                                    <span class="badge badge-info">
-                                        <span class="icon-social-linkedin"></span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-item">
-                                <a>
-                                    <span class="badge badge-info">
-                                        <span class="icon-social-behance"></span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-item">
-                                <a>
-                                    <span class="badge badge-info">
-                                        <span class="icon-social-dribbble"></span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="col-4">
+                        <div class="mb-5">
+                            <h3>Details</h3>
+                            <h5>Phone: 021 154 7194</h5>
+                            <h5>Email: jon_krebs@hotmail.com</h5>
+                            <h5>Licence: Full</h5>
+                        </div>
+                        <div class="mb-5">
+                            <h3>Skills</h3>
+                            <div class="mb-4">
+                                <h5>Dreaming</h5>
+                                <div class="progress" style="height: 3px;">
+                                    <div class="progress-bar bg-primary" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h5>Idea Generation</h5>
+                                <div class="progress" style="height: 3px;">
+                                    <div class="progress-bar bg-primary" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h5>Web Design</h5>
+                                <div class="progress" style="height: 3px;">
+                                    <div class="progress-bar bg-primary" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h5>Graphic Design</h5>
+                                <div class="progress" style="height: 3px;">
+                                    <div class="progress-bar bg-primary" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <h3>Links</h3>
+                            @*<ul class="list-unstyled m-0">
+                                <li class="list-item">
+                                    <a>
+                                        <span class="badge badge-info">
+                                            <span class="icon-social-facebook"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a>
+                                        <span class="badge badge-info">
+                                            <span class="icon-social-linkedin"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a>
+                                        <span class="badge badge-info">
+                                            <span class="icon-social-behance"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a>
+                                        <span class="badge badge-info">
+                                            <span class="icon-social-dribbble"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>*@
+                        </div>
+                        <div class="mb-5">
+                            <h3>Interests</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="bg-light">
-        <div class="container">
-            <h1>Portfolio</h1>
-        </div>
-        <div class="carousel slide" id="PortfolioCarousel" data-ride="carousel">
-            <div class="carousel-inner pb-4">
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-8">
-                                <div class="img-tile" data-toggle="modal" data-target="#exampleModalCenter">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-1.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-2.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-3.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-4.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-5.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
+        </section>
+
+        <section id="Portfolio" class="styled-scroll">
+            <div class="container">
+                <h1>Portfolio</h1>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="img-tile pointer" data-toggle="modal" data-target="#exampleModalCenter">
+                            <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-1.jpg')">
+                                <span class="img-tile-overlay"></span>
+                            </span>
+                            <div class="img-tile-body text-light">
+                                <h2>Text</h2>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-6.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-7.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-8.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
+                    <div class="col-4">
+                        <div class="img-tile pointer">
+                            <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-2.jpg')">
+                                <span class="img-tile-overlay"></span>
+                            </span>
+                            <div class="img-tile-body text-light">
+                                <h2>Text</h2>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-9.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
+                    <div class="col-4">
+                        <div class="img-tile pointer">
+                            <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-3.jpg')">
+                                <span class="img-tile-overlay"></span>
+                            </span>
+                            <div class="img-tile-body text-light">
+                                <h2>Text</h2>
                             </div>
-                            <div class="col-4">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-10.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="img-tile pointer">
+                            <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-4.jpg')">
+                                <span class="img-tile-overlay"></span>
+                            </span>
+                            <div class="img-tile-body text-light">
+                                <h2>Text</h2>
                             </div>
-                            <div class="col-4">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-11.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-12.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="img-tile">
-                                    <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-13.jpg')">
-                                        <span class="img-tile-overlay"></span>
-                                    </span>
-                                    <div class="img-tile-body text-light">
-                                        <h2>Text</h2>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="img-tile pointer">
+                            <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-5.jpg')">
+                                <span class="img-tile-overlay"></span>
+                            </span>
+                            <div class="img-tile-body text-light">
+                                <h2>Text</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <ol class="carousel-indicators">
-                <li data-target="#PortfolioCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#PortfolioCarousel" data-slide-to="1"></li>
-                <li data-target="#PortfolioCarousel" data-slide-to="2"></li>
-            </ol>
-        </div>
-    </section>
-</main>
+        </section>
+
+        @*<section class="styled-scroll">
+            <div class="container">
+                <h1>References</h1>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="d-flex mb-5">
+                            <div class="mr-4">
+                                <img class="nav-avatar" src="~/Content/Media/Images/Misc/Chuck.png" />
+                            </div>
+                            <div>
+                                <h3>Chuck Slogrove CEO at Trail</h3>
+                                <div class="mb-4">
+                                    <p>Chuck is the head of Trail, blah de blah de blah. Alternatively "Here is something nice I have said about Jon." - Chuck</p>
+                                    <h6>Em: <a href="mailto:Chuck@gettrail.com">Chuck@gettrail.com</a></h6>
+                                    <h6>Ph: <a href="tel:02102369299">021 023 69 299</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-5">
+                            <div class="mr-4">
+                                <img class="nav-avatar" src="~/Content/Media/Images/Misc/Andrew.jpg" />
+                            </div>
+                            <div>
+                                <h3>Andrew Malcolm CEO at iRefi</h3>
+                                <div class="mb-4">
+                                    <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                                    <h6>Em: <a href="mailto:Andrew@iRefi.co.nz">Andrew@iRefi.co.nz</a></h6>
+                                    <h6>Ph: <a href="tel:0210000000">021 000 0000</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+
+                    </div>
+                </div>
+            </div>
+        </section>*@
+
+        <footer class="bg-dark text-white">
+            <div class="container">
+                <span>Built with Love By OnePage</span>
+            </div>
+        </footer>
+    </main>
 
 <div class="modal fade lightbox" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="lightboxmodal" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content modal-wide">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <div class="w-full">
+                    <div class="flex">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Series title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <p class="m-0">Overview about what this series of work is about.</p>
+                </div>  
             </div>
             <div class="modal-body">
-                <img class="mw-100" src="~/Content/Media/Images/Portfolio/img-1.jpg" />
+                @* Add in a carousel for different images in this series of work *@
+                <div class="row">
+                    <div class="col-sm-8">
+                        <img class="mw-100" src="~/Content/Media/Images/Portfolio/img-1.jpg" />
+                    </div>
+                    <div class="col-sm-4">
+                        <h6>Piece Title</h6>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe Photoshop CS 2</li>
+                            <li>Adobe InDesign</li>
+                        </ul>
+                        <p>
+                            This piece demonstrates something great about me and here are the words I would like to use to describe waht it is and how I made it.
+                        </p>
+                    </div>
+                </div>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -299,3 +351,256 @@
         </div>
     </div>
 </div>
+
+
+@*<div class="carousel slide" id="PortfolioCarousel" data-ride="carousel">
+        <div class="carousel-inner pb-4">
+            <div class="carousel-item active">
+
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-6.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-7.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-8.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-9.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-10.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-11.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-12.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-13.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#PortfolioCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#PortfolioCarousel" data-slide-to="1"></li>
+            <li data-target="#PortfolioCarousel" data-slide-to="2"></li>
+        </ol>
+    </div>*@
+
+<div hidden id="SectionIndicators">
+    <a href="#Intro" class="section-indicator active"><span>Intro</span></a>
+    <a href="#About-Me" class="section-indicator"><span>About Me</span></a>
+    <a href="#Portfolio" class="section-indicator"><span>Portfolio</span></a>
+</div>
+
+<div hidden id="ScrollWheel">
+    <svg width="26px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+        <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#4800ff;stroke-width:30px;" />
+        <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:rgba(0, 0, 0, 0.40);stroke-width:12px;" />
+    </svg>
+</div>
+
+
+
+
+@section Scripts{
+    <script src="~/Scripts/Plugins/Scrollify/Scrollify.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            setTimeout(function () {
+            $('.nav-body.loading').removeClass('loading');
+                setTimeout(function () {
+                    $('#LoaderProgress').find('.progress-bar').css('width', '100%');
+                    setTimeout(function () {
+                        $('#LoaderProgress').slideUp(200);
+                        setTimeout(function () {
+                            $('main.page-loading').removeClass('page-loading');
+                            setTimeout(function () {
+                                $('#ScrollWheel').fadeIn(200);
+                                $('#SectionIndicators').fadeIn(200);
+                            },1000)
+                        }, 200)
+                    }, 1200)
+                }, 600)
+            }, 600)
+            var Scrolling = false;
+            $(window).bind('mousewheel', function (e) {
+                var elm = $('section.active')
+                if ($(elm).length != 0 && !Scrolling) {
+                    var ScrollPosition = CheckScrollPosition(elm);
+                    if (e.originalEvent.wheelDelta / 120 > 0) { // up
+                        if (ScrollPosition == 2 || ScrollPosition == 0) { // top of div;
+                            var scrollTo = $(elm).prev('section');
+                            if ($(scrollTo).length != 0) { //prev elm
+                                ScrollToSection(scrollTo)
+                            }
+                        }
+                    }
+                    else { // down
+                        $('#ScrollWheel').fadeOut(500);
+                        if (ScrollPosition == 1 || ScrollPosition == 0) { // bottom of div;
+                            var scrollTo = $(elm).next('section');
+                            if ($(scrollTo).length != 0) { //next elm
+                                ScrollToSection(scrollTo)
+                            }
+                        }
+                    }
+                }
+                
+            });
+        });
+
+        function ScrollToSection(elm) {
+            Scrolling = true;
+            $('section.active').removeClass('active');
+            $('html, body').animate({
+                scrollTop: $(elm).offset().top
+            }, 1000);
+
+            setTimeout(function () {
+                $('.section-indicator.active').removeClass('active')
+                $('a.section-indicator[href="#' + $(elm).attr('id') + '"]').addClass('active');
+                $(elm).addClass('active');
+                Scrolling = false;
+            }, 1000)
+        }
+
+        function CheckScrollPosition(elm) {
+            var scrollTop = $(elm).scrollTop();
+            var windowHeight = window.innerHeight;
+            var elmScrollHeight = $(elm)[0].scrollHeight;
+            var Delta = (windowHeight - elmScrollHeight)
+            
+            if (scrollTop == 0 && (Delta < 1 &&  Delta > -1)) {
+                return 0;
+            }
+            else if ((scrollTop + windowHeight + 2) >= elmScrollHeight) {
+                return 1;
+            } else if (scrollTop <= 0) {
+                return 2;
+            } else {
+                return null;
+            }
+        }
+
+        //Smooth Scrolling
+
+        $('a.section-indicator')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $('section.active').removeClass('active');
+                            $target.addClass('active')
+
+                            $('.section-indicator.active').removeClass('active')
+                            $('a.section-indicator[href="#' + $target.attr('id') + '"]').addClass('active');
+
+                            $target.focus();
+
+
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+
+
+    </script>
+}
