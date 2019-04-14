@@ -2,21 +2,19 @@
     ViewBag.Title = "Jon Krebs";
     Layout = "~/Views/Shared/_Layout-Portfolio.cshtml";
     <style>
-        body, html {
-            overflow: hidden;
-        }
-        #ScrollWheel{
+
+        #ScrollWheel {
             position: fixed;
             bottom: 20px;
             left: 50%;
             right: 50%;
         }
+
         #SectionIndicators {
             position: fixed;
             left: 24px;
             top: 35vh;
         }
-
     </style>
 }
 
@@ -52,163 +50,277 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="container">
+                <ul class="nav" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                    </li>
+                </ul>
+            </div>
+         
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="container sm">
+                        <h1>Cover Letter For Contoso Limited</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque urna nisl, mollis sed rhoncus a, luctus ut eros. Donec feugiat dignissim risus, ut dapibus quam sodales eu. Sed eget rutrum diam. Proin imperdiet porta orci, et commodo erat sollicitudin non. Nulla facilisi. Nullam facilisis commodo risus molestie vulputate. Fusce maximus, odio non maximus commodo, est velit varius nibh, vitae semper quam turpis sit amet diam. Duis nibh mauris, lobortis vel justo malesuada, fermentum maximus elit. Donec semper vel nisl sed dignissim. Cras sagittis sagittis urna.
+                            <br /><br />
+                            Donec lacinia vestibulum interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam mollis tincidunt urna, at posuere sem congue quis. Sed tincidunt vulputate velit dictum fringilla. Phasellus blandit cursus facilisis. Quisque tincidunt ornare urna, eu laoreet enim malesuada aliquam. Donec diam neque, ultrices at molestie ac, condimentum et est. Nulla nulla purus, aliquam nec euismod eu, facilisis eget dui.
+                            <br /><br />
+                            Nullam consectetur quam sed aliquam efficitur. Sed consequat lacinia arcu, in elementum sapien dictum vel. Morbi laoreet, lorem malesuada tincidunt pretium, lorem nibh bibendum nulla, nec gravida arcu diam semper sem. Cras non elit sagittis elit venenatis placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam tincidunt erat ipsum, a placerat diam efficitur et. Nullam eros libero, pharetra non pretium ac, fermentum vitae dolor. Nam pellentesque, urna vel volutpat dignissim, ante ipsum ultrices purus, nec congue massa nibh elit.
+                        </p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="container">
+                        <h1>Portfolio</h1>
+                        <div class="row" id="PortfolioGrid">
+                            <div class="img-block pointer">
+                                <div class="img-block-body">
+                                    <img src="~/Content/Media/Images/Portfolio/Img-11.jpg" />
+                                    <div class="img-block-overlay">
+                                        <div class="img-block-text">Text</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="img-block pointer">
+                                <div class="img-block-body">
+                                    <img src="~/Content/Media/Images/Portfolio/Img-1.jpg" />
+                                    <div class="img-block-overlay">
+                                        <div class="img-block-text">Text</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="img-block pointer">
+                                <div class="img-block-body">
+                                    <img src="~/Content/Media/Images/Portfolio/Img-7.jpg" />
+                                    <div class="img-block-overlay">
+                                        <div class="img-block-text">Text</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="img-block pointer">
+                                <div class="img-block-body">
+                                    <img src="~/Content/Media/Images/Portfolio/Img-6.jpg" />
+                                    <div class="img-block-overlay">
+                                        <div class="img-block-text">Text</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="img-block pointer">
+                                <div class="img-block-body">
+                                    <img src="~/Content/Media/Images/Portfolio/Img-12.jpg" />
+                                    <div class="img-block-overlay">
+                                        <div class="img-block-text">Text</div>
+                                    </div>
+                                </div>
+                            </div>
 
-        <section id="About-Me" class="styled-scroll pb-0">
-            <div class="container sm">
-                <div class="row">
-                    <div class="col-8">
-                        <div class="d-flex mb-5">
-                            <div class="mr-4">
-                                <h3 class="icon-anchor"></h3>
-                            </div>
-                            <div>
-                                <h3>Profile</h3>
-                                <p>
-                                    I’m looking to find a Challenge and Freedom working on a project I am passionate about to make a difference to the world. I am an experienced Web Developer, and Creative. Self motivated and driven to learn more and experience life. I won’t fit into a cookie cutter job, and that's what I offer.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-5">
-                            <div class="mr-4">
-                                <h3 class="icon-briefcase"></h3>
-                            </div>
-                            <div>
-                                <h3>Employment History</h3>
-                                <div class="mb-4">
-                                    <h5>Web Developer at <a class="subtle-link" href="https://gettrail.com" target="_blank">Trail</a>, Auckland</h5>
-                                    <h6>September 2017 - Ongoing</h6>
-                                    <p>
-                                        I build a nice CRM system for financial advisers to manage their business more effectively.
-                                    </p>
-                                </div>
-                                <div class="mb-4">
-                                    <h5>Programmer at <a class="subtle-link" href="https://irefi.co.nz" target="_blank">iRefi</a>, Auckland</h5>
-                                    <h6>May 2015 - September 2017</h6>
-                                    <p>
-                                        Worked on building an online lead generation system for a Finance business, then building an in house CRM system
-                                    </p>
-                                </div>
-                                <div class="mb-4">
-                                    <h5>Junior Developer at <a class="subtle-link" href="http://markerdigital.io/" target="_blank">MarkerMetro</a>, Auckland</h5>
-                                    <h6>June 2013 - May 2015</h6>
-                                    <p>
-                                        Quality control and junior development on mobile apps
-                                    </p>
+                            <div class="img-block pointer">
+                                <div class="img-block-body">
+                                    <img src="~/Content/Media/Images/Portfolio/Img-13.jpg" />
+                                    <div class="img-block-overlay">
+                                        <div class="img-block-text">Text</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-flex mb-5">
-                            <div class="mr-4">
-                                <h3 class="icon-graduation"></h3>
-                            </div>
-                            <div>
-                                <h3>Education</h3>
-                                <div class="mb-4">
-                                    <h5>Be Hons Mechanical Engineering at The University of Auckland</h5>
-                                    <h6>January 2014 - September 2017</h6>
-                                </div>
-                                <div class="mb-4">
-                                    <h5>Macleans College</h5>
-                                    <h6>January 2009 - September 2013</h6>
+
+                            <div class="img-block pointer">
+                                <div class="img-block-body">
+                                    <img src="~/Content/Media/Images/Portfolio/Img-5.jpg" />
+                                    <div class="img-block-overlay">
+                                        <div class="img-block-text">Text</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-flex mb-5">
-                            <div class="mr-4">
-                                <h3 class="icon-graduation"></h3>
-                            </div>
-                            <div>
-                                <h3>Extra Curricular</h3>
-                                <div class="mb-4">
-                                    <h5>Long distance Running</h5>
-                                    <h6>January 2014 - September 2017</h6>
+
+                            <div class="img-block pointer">
+                                <div class="img-block-body">
+                                    <img src="~/Content/Media/Images/Portfolio/Img-2.jpg" />
+                                    <div class="img-block-overlay">
+                                        <div class="img-block-text">Text</div>
+                                    </div>
                                 </div>
-                                <div class="mb-4">
-                                    <h5>Hackathons</h5>
-                                    <h6>January 2009 - September 2013</h6>
+                            </div>
+
+                            <div class="img-block pointer">
+                                <div class="img-block-body">
+                                    <img src="~/Content/Media/Images/Portfolio/Img-8.jpg" />
+                                    <div class="img-block-overlay">
+                                        <span>Text</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="mb-5">
-                            <h3>Details</h3>
-                            <h5>Phone: 021 154 7194</h5>
-                            <h5>Email: jon_krebs@hotmail.com</h5>
-                            <h5>Licence: Full</h5>
-                        </div>
-                        <div class="mb-5">
-                            <h3>Skills</h3>
-                            <div class="mb-4">
-                                <h5>Dreaming</h5>
-                                <div class="progress" style="height: 3px;">
-                                    <div class="progress-bar bg-primary" style="width: 100%"></div>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="container sm">
+                        <h1>About Me</h1>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="d-flex mb-5">
+                                    <div class="mr-4">
+                                        <h4 class="icon-anchor"></h4>
+                                    </div>
+                                    <div>
+                                        <h4>Profile</h4>
+                                        <p>
+                                            I’m looking to find a Challenge and Freedom working on a project I am passionate about to make a difference to the world. I am an experienced Web Developer, and Creative. Self motivated and driven to learn more and experience life. I won’t fit into a cookie cutter job, and that's what I offer.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-5">
+                                    <div class="mr-4">
+                                        <h4 class="icon-briefcase"></h4>
+                                    </div>
+                                    <div>
+                                        <h4>Employment History</h4>
+                                        <div class="mb-4">
+                                            <h6>Web Developer at <a class="subtle-link" href="https://gettrail.com" target="_blank">Trail</a>, Auckland</h6>
+                                            <label>September 2017 - Ongoing</label>
+                                            <p>
+                                                I build a nice CRM system for financial advisers to manage their business more effectively.
+                                            </p>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h6>Programmer at <a class="subtle-link" href="https://irefi.co.nz" target="_blank">iRefi</a>, Auckland</h6>
+                                            <label>May 2015 - September 2017</label>
+                                            <p>
+                                                Worked on building an online lead generation system for a Finance business, then building an in house CRM system
+                                            </p>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h6>Junior Developer at <a class="subtle-link" href="http://markerdigital.io/" target="_blank">MarkerMetro</a>, Auckland</h6>
+                                            <label>June 2013 - May 2015</label>
+                                            <p>
+                                                Quality control and junior development on mobile apps
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-5">
+                                    <div class="mr-4">
+                                        <h4 class="icon-graduation"></h4>
+                                    </div>
+                                    <div>
+                                        <h4>Education</h4>
+                                        <div class="mb-4">
+                                            <h6>Be Hons Mechanical Engineering at The University of Auckland</h6>
+                                            <label>January 2014 - September 2017</label>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h6>Macleans College</h6>
+                                            <label>January 2009 - September 2013</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-5">
+                                    <div class="mr-4">
+                                        <h4 class="icon-graduation"></h4>
+                                    </div>
+                                    <div>
+                                        <h4>Extra Curricular</h4>
+                                        <div class="mb-4">
+                                            <h6>Long distance Running</h6>
+                                            <label>January 2014 - September 2017</label>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h6>Hackathons</h6>
+                                            <label>January 2009 - September 2013</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mb-4">
-                                <h5>Idea Generation</h5>
-                                <div class="progress" style="height: 3px;">
-                                    <div class="progress-bar bg-primary" style="width: 80%"></div>
+                            <div class="col-4">
+                                <div class="mb-5">
+                                    <h4>Details</h4>
+                                    <h6>Phone: 021 154 7194</h6>
+                                    <h6>Email: jon_krebs@hotmail.com</h6>
+                                    <h6>Licence: Full</h6>
+                                </div>
+                                <div class="mb-5">
+                                    <h4>Skills</h4>
+                                    <div class="mb-4">
+                                        <h6>Dreaming</h6>
+                                        <div class="progress" style="height: 3px;">
+                                            <div class="progress-bar bg-primary" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h6>Idea Generation</h6>
+                                        <div class="progress" style="height: 3px;">
+                                            <div class="progress-bar bg-primary" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h6>Web Design</h6>
+                                        <div class="progress" style="height: 3px;">
+                                            <div class="progress-bar bg-primary" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h6>Graphic Design</h6>
+                                        <div class="progress" style="height: 3px;">
+                                            <div class="progress-bar bg-primary" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-5">
+                                    <h4>Links</h4>
+                                    @*<ul class="list-unstyled m-0">
+                            <li class="list-item">
+                                <a>
+                                    <span class="badge badge-info">
+                                        <span class="icon-social-facebook"></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a>
+                                    <span class="badge badge-info">
+                                        <span class="icon-social-linkedin"></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a>
+                                    <span class="badge badge-info">
+                                        <span class="icon-social-behance"></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a>
+                                    <span class="badge badge-info">
+                                        <span class="icon-social-dribbble"></span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>*@
+                                </div>
+                                <div class="mb-5">
+                                    <h4>Interests</h4>
                                 </div>
                             </div>
-                            <div class="mb-4">
-                                <h5>Web Design</h5>
-                                <div class="progress" style="height: 3px;">
-                                    <div class="progress-bar bg-primary" style="width: 60%"></div>
-                                </div>
-                            </div>
-                            <div class="mb-4">
-                                <h5>Graphic Design</h5>
-                                <div class="progress" style="height: 3px;">
-                                    <div class="progress-bar bg-primary" style="width: 70%"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-5">
-                            <h3>Links</h3>
-                            @*<ul class="list-unstyled m-0">
-                                <li class="list-item">
-                                    <a>
-                                        <span class="badge badge-info">
-                                            <span class="icon-social-facebook"></span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a>
-                                        <span class="badge badge-info">
-                                            <span class="icon-social-linkedin"></span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a>
-                                        <span class="badge badge-info">
-                                            <span class="icon-social-behance"></span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a>
-                                        <span class="badge badge-info">
-                                            <span class="icon-social-dribbble"></span>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>*@
-                        </div>
-                        <div class="mb-5">
-                            <h3>Interests</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+       
 
-        <section id="Portfolio" class="styled-scroll">
+        @*<section id="Portfolio" class="styled-scroll portfilio-1">
             <div class="container">
                 <h1>Portfolio</h1>
-                <div class="row">
+                <div class="row" id="PortfolioGrid">
                     <div class="col-8">
                         <div class="img-tile pointer" data-toggle="modal" data-target="#exampleModalCenter">
                             <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-1.jpg')">
@@ -261,53 +373,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        @*<section class="styled-scroll">
-            <div class="container">
-                <h1>References</h1>
-                <div class="row">
-                    <div class="col-8">
-                        <div class="d-flex mb-5">
-                            <div class="mr-4">
-                                <img class="nav-avatar" src="~/Content/Media/Images/Misc/Chuck.png" />
-                            </div>
-                            <div>
-                                <h3>Chuck Slogrove CEO at Trail</h3>
-                                <div class="mb-4">
-                                    <p>Chuck is the head of Trail, blah de blah de blah. Alternatively "Here is something nice I have said about Jon." - Chuck</p>
-                                    <h6>Em: <a href="mailto:Chuck@gettrail.com">Chuck@gettrail.com</a></h6>
-                                    <h6>Ph: <a href="tel:02102369299">021 023 69 299</a></h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex mb-5">
-                            <div class="mr-4">
-                                <img class="nav-avatar" src="~/Content/Media/Images/Misc/Andrew.jpg" />
-                            </div>
-                            <div>
-                                <h3>Andrew Malcolm CEO at iRefi</h3>
-                                <div class="mb-4">
-                                    <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                                    <h6>Em: <a href="mailto:Andrew@iRefi.co.nz">Andrew@iRefi.co.nz</a></h6>
-                                    <h6>Ph: <a href="tel:0210000000">021 000 0000</a></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-
-                    </div>
-                </div>
-            </div>
         </section>*@
 
-        <footer class="bg-dark text-white">
-            <div class="container">
-                <span>Built with Love By OnePage</span>
-            </div>
-        </footer>
     </main>
 
 <div class="modal fade lightbox" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="lightboxmodal" aria-hidden="true">
@@ -322,7 +389,7 @@
                         </button>
                     </div>
                     <p class="m-0">Overview about what this series of work is about.</p>
-                </div>  
+                </div>
             </div>
             <div class="modal-body">
                 @* Add in a carousel for different images in this series of work *@
@@ -458,11 +525,11 @@
         </ol>
     </div>*@
 
-<div hidden id="SectionIndicators">
+@*<div hidden id="SectionIndicators">
     <a href="#Intro" class="section-indicator active"><span>Intro</span></a>
-    <a href="#About-Me" class="section-indicator"><span>About Me</span></a>
     <a href="#Portfolio" class="section-indicator"><span>Portfolio</span></a>
-</div>
+    <a href="#About-Me" class="section-indicator"><span>About Me</span></a>
+</div>*@
 
 <div hidden id="ScrollWheel">
     <svg width="26px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
@@ -475,12 +542,20 @@
 
 
 @section Scripts{
+    <script src="~/Scripts/Plugins/Masonry/masonry-docs.min.js"></script>
     <script src="~/Scripts/Plugins/Scrollify/Scrollify.js"></script>
     <script>
 
-        $(document).ready(function () {
+
+        $(function () {
+
+            $(window).scroll(function () {
+                $('#ScrollWheel').fadeOut(500);
+            });
+
+            //Fadein Animation
             setTimeout(function () {
-            $('.nav-body.loading').removeClass('loading');
+                $('.nav-body.loading').removeClass('loading');
                 setTimeout(function () {
                     $('#LoaderProgress').find('.progress-bar').css('width', '100%');
                     setTimeout(function () {
@@ -490,36 +565,42 @@
                             setTimeout(function () {
                                 $('#ScrollWheel').fadeIn(200);
                                 $('#SectionIndicators').fadeIn(200);
-                            },1000)
+                            }, 1000)
                         }, 200)
                     }, 1200)
                 }, 600)
             }, 600)
-            var Scrolling = false;
-            $(window).bind('mousewheel', function (e) {
-                var elm = $('section.active')
-                if ($(elm).length != 0 && !Scrolling) {
-                    var ScrollPosition = CheckScrollPosition(elm);
-                    if (e.originalEvent.wheelDelta / 120 > 0) { // up
-                        if (ScrollPosition == 2 || ScrollPosition == 0) { // top of div;
-                            var scrollTo = $(elm).prev('section');
-                            if ($(scrollTo).length != 0) { //prev elm
-                                ScrollToSection(scrollTo)
-                            }
-                        }
-                    }
-                    else { // down
-                        $('#ScrollWheel').fadeOut(500);
-                        if (ScrollPosition == 1 || ScrollPosition == 0) { // bottom of div;
-                            var scrollTo = $(elm).next('section');
-                            if ($(scrollTo).length != 0) { //next elm
-                                ScrollToSection(scrollTo)
-                            }
-                        }
-                    }
-                }
-                
-            });
+
+            //Set Scroll
+            //var Scrolling = false;
+            //$(window).bind('mousewheel', function (e) {
+            //    var elm = $('section.active')
+            //    if ($(elm).length != 0 && !Scrolling) {
+            //        var ScrollPosition = CheckScrollPosition(elm);
+            //        if (e.originalEvent.wheelDelta / 120 > 0) { // up
+            //            if (ScrollPosition == 2 || ScrollPosition == 0) { // top of div;
+            //                var scrollTo = $(elm).prev('section');
+            //                if ($(scrollTo).length != 0) { //prev elm
+            //                    ScrollToSection(scrollTo)
+            //                }
+            //            }
+            //        }
+            //        else { // down
+            //            $('#ScrollWheel').fadeOut(500);
+            //            if (ScrollPosition == 1 || ScrollPosition == 0) { // bottom of div;
+            //                var scrollTo = $(elm).next('section');
+            //                if ($(scrollTo).length != 0) { //next elm
+            //                    ScrollToSection(scrollTo)
+            //                }
+            //            }
+            //        }
+            //    }
+            //});
+
+            //Masonry
+            $('#PortfolioGrid').masonry({
+                percentPosition: true
+            })
         });
 
         function ScrollToSection(elm) {
@@ -542,8 +623,8 @@
             var windowHeight = window.innerHeight;
             var elmScrollHeight = $(elm)[0].scrollHeight;
             var Delta = (windowHeight - elmScrollHeight)
-            
-            if (scrollTop == 0 && (Delta < 1 &&  Delta > -1)) {
+
+            if (scrollTop == 0 && (Delta < 1 && Delta > -1)) {
                 return 0;
             }
             else if ((scrollTop + windowHeight + 2) >= elmScrollHeight) {

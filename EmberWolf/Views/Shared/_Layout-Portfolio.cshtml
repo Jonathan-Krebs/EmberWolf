@@ -11,34 +11,39 @@
     <div class="body-content">
         @RenderBody()
     </div>
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <span>Built with Love By OnePage</span>
+        </div>
+    </footer>
 
-   
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     @*<script>
-        $(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() >= 600) {
-                    if (!$('#Header').hasClass('Header-Fixed')) {
-                        $('#Header').addClass('Header-Fixed').css('top', '-100px');
-                        setTimeout(function () {
-                            $('#Header').addClass('Transition04').css('top', '-0px');
-                        }, 50)
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() >= 600) {
+                        if (!$('#Header').hasClass('Header-Fixed')) {
+                            $('#Header').addClass('Header-Fixed').css('top', '-100px');
+                            setTimeout(function () {
+                                $('#Header').addClass('Transition04').css('top', '-0px');
+                            }, 50)
+                        }
                     }
-                }
-                else {
-                    if ($('#Header').hasClass('Header-Fixed')) {
-                        $('#Header').css('top', '-100px');
-                        setTimeout(function () {
-                            $('#Header').removeClass('Header-Fixed').removeClass('Transition04').css('top', '-0px');
-                        }, 200)
+                    else {
+                        if ($('#Header').hasClass('Header-Fixed')) {
+                            $('#Header').css('top', '-100px');
+                            setTimeout(function () {
+                                $('#Header').removeClass('Header-Fixed').removeClass('Transition04').css('top', '-0px');
+                            }, 200)
+                        }
                     }
-                }
+                });
             });
-        });
-    </script>*@
+        </script>*@
 
     <script>
 
@@ -54,7 +59,7 @@
                     if (!sticky.hasClass('is-sticky')) {
                         stickyWrapper.height(stickyHeight);
                         sticky.addClass("is-sticky");
-                        
+
                     }
                 }
                 else {

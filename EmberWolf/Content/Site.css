@@ -5,21 +5,29 @@ html, body{
 body {
     padding-bottom: 20px;
 }
-
-section{
-    height: 100vh;
-    overflow-y: auto;
-    padding-top: 100px;
+block{
+    display: block;
+    padding-bottom: 60px;
+}
+block:last-of-type {
+    padding-bottom: 0px;
+}
+section {
+    /*height: 100vh;
+    overflow-y: auto;*/
+    padding-top: 80px;
     padding-bottom: 80px;
     transition: 0.2s;
 }
-section:last-of-type{
-    padding-bottom: 0px;
-}
+
 footer{
     padding: 12px;
 }
 
+/*Text*/
+label{
+    color: #888;
+}
 
 /*Transition*/
 .Transition02{
