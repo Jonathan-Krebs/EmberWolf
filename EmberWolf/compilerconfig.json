@@ -1,0 +1,24 @@
+﻿[
+  {
+    "outputFile": "Content/Layouts.css",
+    "inputFile": "Content/Layout.scss",
+    "minify": {
+      "enabled": true
+    },
+    "options": {
+      "always_check": true,
+      "sourceMap": true,
+      "includePath": "",
+      "indentType": "space",
+      "indentWidth": 4,
+      "outputStyle": "nested",
+      "Precision": 5,
+      "relativeUrls": true,
+      "sourceMapRoot": ""
+    }
+  },
+  {
+    "outputFile": "Content/Layouts.css",
+    "inputFile": "Content/Layouts.scss"
+  }
+]

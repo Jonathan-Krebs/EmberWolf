@@ -1,89 +1,45 @@
 ﻿<!DOCTYPE html>
-<html>
+<html class="noscroll">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Animotion</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <div class="body-content">
+        <div id="page-overlay" class="page-overlay"></div>
         @RenderBody()
     </div>
-    <footer class="bg-dark text-white">
-        <div class="container">
-            <span>Built with Love By OnePage</span>
-        </div>
-    </footer>
-
-
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    @*<script>
-            $(function () {
-                $(window).scroll(function () {
-                    if ($(this).scrollTop() >= 600) {
-                        if (!$('#Header').hasClass('Header-Fixed')) {
-                            $('#Header').addClass('Header-Fixed').css('top', '-100px');
-                            setTimeout(function () {
-                                $('#Header').addClass('Transition04').css('top', '-0px');
-                            }, 50)
-                        }
-                    }
-                    else {
-                        if ($('#Header').hasClass('Header-Fixed')) {
-                            $('#Header').css('top', '-100px');
-                            setTimeout(function () {
-                                $('#Header').removeClass('Header-Fixed').removeClass('Transition04').css('top', '-0px');
-                            }, 200)
-                        }
-                    }
-                });
-            });
-        </script>*@
+  <script>
 
-    <script>
+      $(window).scroll(function () {
+          $('#ScrollWheel').fadeOut(500);
+      });
 
-        // Sticky navbar
-        // =========================
-        $(document).ready(function () {
-            $('.carousel').carousel()
-            // Custom function which toggles between sticky class (is-sticky)
-            var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
-                var stickyHeight = sticky.outerHeight();
-                var stickyTop = stickyWrapper.offset().top;
-                if (scrollElement.scrollTop() >= stickyTop) {
-                    if (!sticky.hasClass('is-sticky')) {
-                        stickyWrapper.height(stickyHeight);
-                        sticky.addClass("is-sticky");
-
-                    }
-                }
-                else {
-                    sticky.removeClass("is-sticky");
-                    stickyWrapper.height('auto');
-                }
-            };
-
-            // Find all data-toggle="sticky-onscroll" elements
-            $('[data-toggle="sticky-onscroll"]').each(function () {
-                var sticky = $(this);
-                var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
-                sticky.before(stickyWrapper);
-                sticky.addClass('sticky');
-
-                // Scroll & resize events
-                $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
-                    stickyToggle(sticky, stickyWrapper, $(this));
-                });
-
-                // On page load
-                stickyToggle(sticky, stickyWrapper, $(window));
-            });
-        });
-    </script>
+      //Fadein Animation
+      setTimeout(function () {
+          $('.nav-body.loading').removeClass('loading');
+          setTimeout(function () {
+              $('#LoaderProgress').find('.progress-bar').css('width', '100%');
+              setTimeout(function () {
+                  $('#LoaderProgress').slideUp(200);
+                  setTimeout(function () {
+                      $('#page-overlay').fadeOut(200)
+                      $('.nav-menu').fadeIn(200)
+                      $('html').removeClass('noscroll');
+                      setTimeout(function () {
+                          $('#ScrollWheel').fadeIn(200);
+                          $('#SectionIndicators').fadeIn(200);
+                      }, 1000)
+                  }, 200)
+              }, 1200)
+          }, 600)
+      }, 600)
+  </script>
 </body>
 </html>

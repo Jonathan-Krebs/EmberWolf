@@ -2,21 +2,31 @@
 html, body{
     overflow-x: hidden;
 }
-body {
-    padding-bottom: 20px;
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    border-radius: 0px;
+    padding: 3px;
+    background-color: #fff;
 }
-block{
-    display: block;
-    padding-bottom: 60px;
+
+body::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: #fff
 }
-block:last-of-type {
-    padding-bottom: 0px;
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    -webkit-box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s !important;
 }
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 section {
-    /*height: 100vh;
-    overflow-y: auto;*/
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 15px 0px;
     transition: 0.2s;
 }
 
@@ -45,12 +55,6 @@ label{
 
 .w-full {
     width:100%;
-}
-
-@media (min-width: 1400px) {
-    .container:not(.sm) {
-        max-width: 1340px;
-    }
 }
 
 /*Height*/

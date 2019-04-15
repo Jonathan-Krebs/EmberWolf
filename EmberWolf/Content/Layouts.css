@@ -1,0 +1,57 @@
+﻿/*Altitude*/
+.Altitude nav.is-sticky .nav-body {
+  box-shadow: 0px 2px 24px -1px rgba(0, 0, 0, 0.1); }
+
+.Altitude .text-block {
+  background: #f9f9f9;
+  padding: 2rem; }
+
+.Altitude .container.sm {
+  max-width: 960px; }
+
+.Altitude .container.md {
+  max-width: 1070px; }
+
+@media (min-width: 1400px) {
+  .Altitude .container:not(.sm):not(.md) {
+    max-width: 1340px; } }
+
+.Altitude .bg-alt {
+  background: #f9f9f9; }
+
+.Altitude.Dark section {
+  background: #1f1f22; }
+
+.Altitude.Dark footer {
+  background: #1f1f22; }
+
+.Altitude.Dark .nav-body {
+  background: #27272d; }
+
+.Altitude.Dark nav.is-sticky .nav-body {
+  border-bottom: 1px solid #373543; }
+
+.Altitude.Dark .text-block {
+  background: #27272d;
+  color: #fff;
+  border: 1px solid #373543; }
+
+.Altitude.Dark .bg-alt {
+  background: #27272d;
+  border: 1px solid #373543; }
+
+.Altitude.Dark .page-overlay {
+  background: #27272d; }
+
+.Resen .text-block {
+  border-radius: 6px;
+  padding: 2rem; }
+
+.Resen .img-tile img {
+  border-radius: 6px; }
+
+.Resen .nav-body {
+  border-radius: 12px; }
+
+.Resen .nav-avatar {
+  border-radius: 100%; }

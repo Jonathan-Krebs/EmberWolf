@@ -214,6 +214,16 @@
     <Content Include="Content\Bootstrap\bootstrap-reboot.min.css" />
     <Content Include="Content\Bootstrap\bootstrap.css" />
     <Content Include="Content\Bootstrap\bootstrap.min.css" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <None Include="Content\Layouts.scss" />
+    <Content Include="Content\Layouts.css">
+      <DependentUpon>Layouts.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Layouts.min.css">
+      <DependentUpon>Layouts.css</DependentUpon>
+    </Content>
     <Content Include="Content\Media\Images\Kea.jpg" />
     <Content Include="Content\Media\Images\Misc\Avatar.png" />
     <Content Include="Content\Media\Images\Portfolio\img-1.jpg" />
@@ -238,6 +248,7 @@
     <Content Include="Content\simple-line-icons.css" />
     <Content Include="Content\Fonts\Simple-Line-Icons.svg" />
     <Content Include="Content\Classes.css" />
+    <Content Include="Content\Fonts.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -260,6 +271,7 @@
     <Content Include="Content\Fonts\Simple-Line-Icons.ttf" />
     <Content Include="Content\Fonts\Simple-Line-Icons.woff" />
     <Content Include="Content\Fonts\Simple-Line-Icons.woff2" />
+    <Content Include="compilerconfig.json" />
     <None Include="Scripts\JQuery\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.bundle.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.bundle.min.js" />
@@ -313,6 +325,8 @@
     <Content Include="Views\Portfolio\Index.cshtml" />
     <Content Include="Views\Shared\_Layout-Portfolio.cshtml" />
     <Content Include="Views\Home\CoverLetter.cshtml" />
+    <Content Include="Views\Home\Index - Copy.cshtml" />
+    <Content Include="Views\Shared\_Layout-Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
