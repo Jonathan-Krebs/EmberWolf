@@ -1,0 +1,68 @@
+﻿
+<div data-menu="Main" class="menu open p-16">
+    <ul class="list-unstyled">
+        <li class="list-group-item" onclick="OpenMenu('Navbar')">Navbar <span class="icon-arrow-right"></span></li>
+        <li class="list-group-item" onclick="OpenMenu('Jumbotron')">Jumbotron <span class="icon-arrow-right"></span></li>
+        <li class="list-group-item">Cover Letter <span class="icon-arrow-right"></span></li>
+        <li class="list-group-item" onclick="OpenMenu('Resume')">Resume <span class="icon-arrow-right"></span></li>
+        <li class="list-group-item">Portfolio <span class="icon-arrow-right"></span></li>
+        <li class="list-group-item">Footer <span class="icon-arrow-right"></span></li>
+    </ul>
+</div>
+
+<div data-menu="Navbar" class="menu closed-right">
+    <div class="menu-header">
+        <span><span onclick="OpenMenu('Main')" class="icon-arrow-left mr-3 pointer"></span> Navbar</span>
+    </div>
+    <div class="p-16">
+        <div class="mb-4">
+            <label>Avatar</label>
+            <input type="file" class="form-control-file" />
+        </div>
+        <div class="mb-4">
+            <label>Name</label>
+            <input class="form-control" />
+        </div>
+        <div class="mb-4">
+            <label>Title</label>
+            <input class="form-control" />
+        </div>
+    </div>
+</div>
+
+<div data-menu="Jumbotron" class="menu closed-right">
+    <div class="menu-header">
+        <span><span onclick="OpenMenu('Main')" class="icon-arrow-left mr-3 pointer"></span> Jumbotron</span>
+    </div>
+    <div class="p-16">
+
+    </div>
+</div>
+
+<div data-menu="Resume" class="menu closed-right">
+    <div class="menu-header">
+        <span><span onclick="OpenMenu('Main')" class="icon-arrow-left mr-3 pointer"></span> Resume</span>
+    </div>
+    <div class="p-16">
+        <div class="mb-4">
+            <label>Profie</label>
+            <textarea class="form-control"></textarea>
+        </div>
+
+        <div class="mb-4">
+            <label>Employment History</label>
+            <textarea class="form-control"></textarea>
+        </div>
+
+        <div class="mb-4">
+            <label>Education</label>
+            <textarea class="form-control"></textarea>
+        </div>
+
+        <div class="mb-4">
+            <label>Extra Curricular</label>
+            <textarea class="form-control"></textarea>
+        </div>
+
+    </div>
+</div>

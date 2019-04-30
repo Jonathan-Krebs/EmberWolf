@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 12px;
+    border-radius: 0x;
     -webkit-box-shadow: none;
     background-color: rgba(0, 0, 0, 0.5);
     transition: 0.2s !important;
@@ -37,6 +37,9 @@ footer{
 /*Text*/
 label{
     color: #888;
+}
+.text-nodecoration, .text-nodecoration:hover{
+    text-decoration: none !important;
 }
 
 /*Transition*/
@@ -66,6 +69,11 @@ label{
 }
 .h-480p{
     height: 480px;
+}
+
+/*Padding*/
+.p-16{
+    padding: 16px;
 }
 
 /*img*/
@@ -98,7 +106,10 @@ label{
         transform: translateY(-50%);
     }
 
-
+    .bottom{
+        position: absolute;
+        bottom: 0px;
+    }
 
 /*Cursor*/
 .pointer {

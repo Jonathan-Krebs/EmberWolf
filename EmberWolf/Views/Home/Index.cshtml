@@ -3,46 +3,40 @@
     Layout = "~/Views/Shared/_Layout-Edit.cshtml";
 }
 
+<header class="navbar navbar-expand-lg navbar-light bg-white nav-down fixed-top Transition04">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div>
+                <img class="avatar" src="~/Content/Media/Images/Misc/Avatar.png" />
+            </div>
+            <a class="navbar-brand">Jon Krebs</a>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cover Letter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Work</a>
+                </li>
+                @*<li>
+                    <button class="btn btn-primary">Download CV</button>
+                </li>*@
+            </ul>
+        </div>
+    </div>
+</header>
+
+
 <main role="main" class="Altitude">
     <section id="Intro" class="h-100vh">
         <div class="img-cover hero" style="background-image: url('/Content/Media/Images/Kea.jpg');">
             <div class="hero-overlay">
-                <nav class="d-flex" data-toggle="sticky-onscroll">
-                    <div class="nav-body loading">
-                        <div class="nav-body-content">
-                            <div class="mr-4">
-                                <img class="nav-avatar" src="~/Content/Media/Images/Misc/Avatar.png" />
-                            </div>
-                            <div class="Vertical-Align-Parent mr-4 w-full">
-                                <div class="Vertical-Align flex">
-                                    <div>
-                                        <h2 class="nav-title">Jon Krebs</h2>
-                                        <h5 class="nav-subtitle">Maker</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div hidden class="nav-menu">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item active">
-                                        <a class="nav-link" href="#">Cover Letter</a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a class="nav-link" href="#">Profile</a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a class="nav-link" href="#">Work</a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <button class="btn btn-primary btn-sm">Download Resume</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="progress mt-4" style="height: 3px;" id="LoaderProgress">
-                            <div class="progress-bar" style="transition: 1s; width: 0;"></div>
-                        </div>
-                    </div>
-                </nav>
+
             </div>
         </div>
     </section>
@@ -608,5 +602,52 @@
                 stickyToggle(sticky, stickyWrapper, $(window));
             });
         });
+
+
+        // Hide header on scroll down
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('header').outerHeight();
+
+        $(window).scroll(function (event) {
+            didScroll = true;
+            if ($(window).scrollTop() != 0) {
+                $('header').addClass('shadow-lg');
+            } else {
+                $('header').removeClass('shadow-lg');
+            }
+        });
+
+        setInterval(function () {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+
+            // Make scroll more than delta
+            if (Math.abs(lastScrollTop - st) <= delta)
+                return;
+
+            // If scrolled down and past the navbar, add class .nav-up.
+            if (st > lastScrollTop && st > navbarHeight) {
+                // Scroll Down
+                if ($(window).scrollTop() > 650) {
+                    $('header').removeClass('nav-down').addClass('nav-up');
+                }
+            } else {
+                // Scroll Up
+                if (st + $(window).height() < $(document).height()) {
+                    $('header').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+
+            lastScrollTop = st;
+        }
+
     </script>
 }

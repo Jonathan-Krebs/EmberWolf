@@ -224,6 +224,7 @@
     <Content Include="Content\Layouts.min.css">
       <DependentUpon>Layouts.css</DependentUpon>
     </Content>
+    <Content Include="Content\Media\Images\Bg\full-bloom.png" />
     <Content Include="Content\Media\Images\Kea.jpg" />
     <Content Include="Content\Media\Images\Misc\Avatar.png" />
     <Content Include="Content\Media\Images\Portfolio\img-1.jpg" />
@@ -327,6 +328,7 @@
     <Content Include="Views\Home\CoverLetter.cshtml" />
     <Content Include="Views\Home\Index - Copy.cshtml" />
     <Content Include="Views\Shared\_Layout-Edit.cshtml" />
+    <Content Include="Views\Shared\Edit-Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
