@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DataModels-Web.config Connection String" description="DataModels Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-EmberWolf-20180912071752.mdf;Initial Catalog=aspnet-EmberWolf-20180912071752;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Armadaeus\\Documents\\GitHub\\EmberWolf\\EmberWolf\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DataModels']/@connectionString" />
+  </parameter>
+</parameters>

@@ -131,7 +131,7 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #00dea3;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -192,7 +192,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #6c757d;
+  color: #36ACB8;
   text-align: left;
   caption-side: bottom;
 }

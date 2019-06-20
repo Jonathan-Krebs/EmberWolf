@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html class="noscroll">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="body-content">
+        <div id="page-overlay" class="page-overlay Vertical-Align-Parent">
+                <nav class="d-flex Vertical-Align">
+                    <div class="nav-body loading">
+                        <div class="nav-body-content">
+                            <div class="mr-4">
+                                <img class="nav-avatar" src="~/Content/Media/Images/Misc/Avatar.png" />
+                            </div>
+                            <div class="Vertical-Align-Parent mr-4 w-full">
+                                <div class="Vertical-Align flex">
+                                    <div>
+                                        <h2 class="nav-title">Jon Krebs</h2>
+                                        <h5 class="nav-subtitle">Maker</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress mt-4" style="height: 3px;" id="LoaderProgress">
+                            <div class="progress-bar" style="transition: 1s; width: 0;"></div>
+                        </div>
+                    </div>
+                </nav>
+        </div>
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script>
+
+        $(window).scroll(function () {
+            $('#ScrollWheel').fadeOut(500);
+        });
+
+        //Fadein Animation
+        setTimeout(function () {
+            $('.nav-body.loading').removeClass('loading');
+            setTimeout(function () {
+                $('#LoaderProgress').find('.progress-bar').css('width', '100%');
+                setTimeout(function () {
+                    $('#LoaderProgress').slideUp(200);
+                    setTimeout(function () {
+                        $('#page-overlay').fadeOut(200)
+                        $('.nav-menu').fadeIn(200)
+                        $('html').removeClass('noscroll');
+                        setTimeout(function () {
+                            $('#ScrollWheel').fadeIn(200);
+                            $('#SectionIndicators').fadeIn(200);
+                        }, 1000)
+                    }, 200)
+                }, 1200)
+            }, 600)
+        }, 600)
+    </script>
+</body>
+</html>

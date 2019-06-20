@@ -1,5 +1,5 @@
 ﻿/*Tag*/
-html, body{
+body{
     overflow-x: hidden;
 }
 body::-webkit-scrollbar-track {
@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 0x;
+    border-radius: 0;
     -webkit-box-shadow: none;
     background-color: rgba(0, 0, 0, 0.5);
     transition: 0.2s !important;
@@ -26,7 +26,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 section {
-    padding: 15px 0px;
     transition: 0.2s;
 }
 
@@ -35,11 +34,28 @@ footer{
 }
 
 /*Text*/
-label{
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-weight: 400;
+}
+.text-light{
+    font-weight: 300;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 48px;
+}
+
+label {
     color: #888;
 }
 .text-nodecoration, .text-nodecoration:hover{
     text-decoration: none !important;
+}
+
+/*Border*/
+.border-round{
+    border-radius: 100px;
 }
 
 /*Transition*/
@@ -54,6 +70,12 @@ label{
 /*Width*/
 .w-150px {
     width: 150px;
+}
+.w-400px {
+    width: 400px;
+}
+.w-480px {
+    width: 480px;
 }
 
 .w-full {
@@ -92,6 +114,9 @@ label{
 .bg-dark08 {
     background: rgba(52, 58, 64, 0.8)
 }
+.bg-black {
+    background: #000;
+}
 
 /*Alignment*/
 .Vertical-Align-Parent {
@@ -100,18 +125,54 @@ label{
     transform-style: preserve-3d;
 }
 
-    .Vertical-Align-Parent .Vertical-Align {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .bottom{
-        position: absolute;
-        bottom: 0px;
-    }
+.Vertical-Align-Parent .Vertical-Align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.right{
+    margin-right: 0px;
+    margin-left: auto;
+}
+.right-abs{
+    right: 0px;
+}
+.left {
+    margin-left: 0px;
+    margin-right: auto;
+}
+.left-abs {
+    left: 0px;
+}
+.bottom{
+    position: absolute;
+    bottom: 0px;
+}
+.top {
+    position: absolute;
+    top: 0px;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
 
 /*Cursor*/
 .pointer {
     cursor:pointer;
+}
+
+
+.mobile-show {
+    display: none !important;
+}
+@media (max-width: 480px){
+    .mobile-hide{
+        display: none !important;
+    }
+    .mobile-show {
+        display: block !important;
+    }
 }

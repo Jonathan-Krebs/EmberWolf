@@ -1,0 +1,155 @@
+﻿/*Tag*/
+body{
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    border-radius: 0px;
+    padding: 3px;
+    background-color: #fff;
+}
+
+body::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: #fff
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s !important;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+section {
+    transition: 0.2s;
+}
+
+footer{
+    padding: 12px;
+}
+
+/*Text*/
+label{
+    color: #888;
+}
+.text-nodecoration, .text-nodecoration:hover{
+    text-decoration: none !important;
+}
+
+/*Transition*/
+.Transition02{
+    transition: 0.2s;
+}
+
+.Transition04 {
+    transition: 0.4s;
+}
+
+/*Width*/
+.w-150px {
+    width: 150px;
+}
+.w-400px {
+    width: 400px;
+}
+.w-480px {
+    width: 480px;
+}
+
+.w-full {
+    width:100%;
+}
+
+/*Height*/
+.h-80vh {
+    height: 80vh;
+}
+.h-100vh {
+    height: 100vh;
+}
+.h-480p{
+    height: 480px;
+}
+
+/*Padding*/
+.p-16{
+    padding: 16px;
+}
+
+/*img*/
+.img-cover{
+    background-position: center;
+    background-size: cover;
+}
+.img-fixed{
+    background-attachment: fixed;
+}
+
+/*Background*/
+.bg-dark05 {
+    background: rgba(52, 58, 64, 0.5)
+}
+.bg-dark08 {
+    background: rgba(52, 58, 64, 0.8)
+}
+.bg-black {
+    background: #000;
+}
+
+/*Alignment*/
+.Vertical-Align-Parent {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.Vertical-Align-Parent .Vertical-Align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.right{
+    margin-right: 0px;
+    margin-left: auto;
+}
+.left {
+    margin-left: 0px;
+    margin-right: auto;
+}
+.bottom{
+    position: absolute;
+    bottom: 0px;
+}
+.top {
+    position: absolute;
+    top: 0px;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
+/*Cursor*/
+.pointer {
+    cursor:pointer;
+}
+
+
+.mobile-show {
+    display: none !important;
+}
+@media (max-width: 480px){
+    .mobile-hide{
+        display: none !important;
+    }
+    .mobile-show {
+        display: block !important;
+    }
+}

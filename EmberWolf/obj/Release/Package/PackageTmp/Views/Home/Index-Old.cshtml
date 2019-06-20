@@ -1,0 +1,504 @@
+﻿@{
+    ViewBag.Title = "Zeeco - Do Good Effortlessly";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    <style>
+        .bg-green-grad {
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00dea3+0,36acb8+100 */
+            background: #00dea3; /* Old browsers */
+            background: -moz-linear-gradient(top, #00dea3 0%, #36acb8 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #00dea3 0%,#36acb8 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #00dea3 0%,#36acb8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dea3', endColorstr='#36acb8',GradientType=0 ); /* IE6-9 */
+        }
+
+        .scroll-shift {
+            bottom: -40vh;
+        }
+
+        .highlight {
+            border-radius: 2px;
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 12.0px 20.8px 12.0px;
+            border-color: transparent transparent #333 transparent;
+            position: absolute;
+        }
+
+        .highlight-body {
+            position: absolute;
+            top: 24px;
+            padding: 6px;
+            width: 100px;
+            right: -50px;
+            background: #e7e7e7;
+            border-radius: 6px;
+        }
+    </style>
+    <link href="~/Scripts/Plugins/Range/css/ion.rangeSlider.css" rel="stylesheet" />
+}
+
+<main role="main" class="mobile-hide">
+    <section id="1" class="bg-green-grad position-relative active ShiftIn h-100vh">
+
+        <div style="margin-top: 10vh" class="text-center text-white">
+            <img src="~/Content/Media/Zeeco/Zeeco-Logo-White.svg" class="mb-4" />
+            <h3>Do Good Effortlessly</h3>
+            <h3 class="text-white-50">Coming Soon</h3>
+        </div>
+
+        <div class="scroll-shift position-absolute w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1261" fill="none">
+                <path d="M367.949 495.387C363.207 491.047 362.084 476.245 362.084 476.245C362.084 476.245 376.835 475.55 381.519 479.629C386.484 483.952 383.831 496.418 383.831 496.418C383.831 496.418 372.554 499.602 367.949 495.387Z" fill="white" />
+                <path d="M380.566 453.784C379.466 447.418 387.589 435.043 387.589 435.043C387.589 435.043 399.65 443.646 400.862 449.77C402.148 456.261 392.468 464.45 392.468 464.45C392.468 464.45 381.633 459.965 380.566 453.784Z" fill="white" />
+                <path d="M404.578 462.289C408.839 457.914 421.972 458.495 421.972 458.495C421.972 458.495 420.899 473.667 416.881 478.003C412.623 482.599 401.348 479.107 401.348 479.107C401.348 479.107 400.441 466.537 404.578 462.289Z" fill="white" />
+                <path d="M392.554 465.288C392.554 465.288 391.796 467.727 391.356 469.327C388.889 478.292 388.078 490.146 388.006 501.25L384.5 496.587L387.192 502.789C387.729 504.026 388.008 505.351 388.025 506.7C388.225 522.807 389.558 549 389.558 549H392.404H395.249C395.249 549 397.725 513.484 396.788 491.871C396.721 490.321 396.987 488.777 397.599 487.35L401 479.423L396.382 485.481C395.889 479.646 395.06 474.08 393.752 469.327C393.311 467.727 392.554 465.288 392.554 465.288Z" fill="white" />
+                <path d="M499 582.5C499 582.5 514.273 481.825 507.013 453.078C500.032 425.438 472.979 388.5 472.979 388.5L513.994 437.37C513.994 437.37 520.975 388.5 517.485 356.211C513.994 323.922 502.649 300.36 502.649 300.36C502.649 300.36 522.503 330.904 527.957 352.72C533.411 374.537 531.447 437.37 531.447 437.37L572.882 391.707C573.718 390.786 574.078 389.528 573.855 388.303L563.736 332.649L581.1 385.567C581.627 387.173 583.376 388.027 584.967 387.454L647.513 364.938L583.34 395.29C583.071 395.417 582.832 395.562 582.6 395.748C578.92 398.697 546.016 425.633 536.683 453.078C527.906 478.89 531.447 582.5 531.447 582.5H499Z" fill="white" />
+                <path d="M457.741 414.194C447.608 418.921 423.275 410.72 423.275 410.72C423.275 410.72 432.193 386.412 441.87 381.603C452.128 376.504 470.174 389.226 470.174 389.226C470.174 389.226 467.58 409.605 457.741 414.194Z" fill="white" />
+                <path d="M448.659 367.908C446.74 356.846 460.918 335.341 460.918 335.341C460.918 335.341 481.967 350.292 484.084 360.934C486.328 372.214 469.433 386.443 469.433 386.443C469.433 386.443 450.522 378.65 448.659 367.908Z" fill="white" />
+                <path d="M474.322 312.856C463.433 310.119 449.536 288.433 449.536 288.433C449.536 288.433 471.745 275.265 482.33 277.651C493.549 280.18 499.695 301.396 499.695 301.396C499.695 301.396 484.896 315.515 474.322 312.856Z" fill="white" />
+                <path d="M494.152 270.264C497.998 259.716 521.002 248.129 521.002 248.129C521.002 248.129 531.809 271.577 528.345 281.859C524.673 292.758 502.935 296.683 502.935 296.683C502.935 296.683 490.418 280.507 494.152 270.264Z" fill="white" />
+                <path d="M533.851 327.699C526.638 319.094 528.106 293.379 528.106 293.379C528.106 293.379 553.816 295.744 560.988 303.885C568.591 312.515 561.121 333.302 561.121 333.302C561.121 333.302 540.854 336.054 533.851 327.699Z" fill="white" />
+                <path d="M638.277 333.968C641.629 323.875 662.674 314.737 662.674 314.737C662.674 314.737 672.546 339.255 669.546 349.101C666.365 359.538 646.018 362.708 646.018 362.708C646.018 362.708 635.021 343.768 638.277 333.968Z" fill="white" />
+                <path d="M572.599 305.684C580.036 298.082 602.957 299.091 602.957 299.091C602.957 299.091 601.085 325.456 594.072 332.991C586.639 340.978 566.961 334.91 566.961 334.91C566.961 334.91 565.378 313.066 572.599 305.684Z" fill="white" />
+                <path d="M679.6 366.631C688.481 372.482 691.861 395.175 691.861 395.175C691.861 395.175 665.623 398.364 656.889 392.917C647.631 387.144 649.835 366.67 649.835 366.67C649.835 366.67 670.976 360.95 679.6 366.631Z" fill="white" />
+                <path d="M682.872 342.46C689.894 341.016 702.323 350.222 702.323 350.222C702.323 350.222 691.336 364.25 684.576 365.817C677.411 367.478 668.702 356.668 668.702 356.668C668.702 356.668 676.053 343.863 682.872 342.46Z" fill="white" />
+                <path d="M560.266 285.678C562.526 278.874 576.714 272.714 576.714 272.714C576.714 272.714 583.369 289.243 581.346 295.881C579.202 302.917 565.485 305.054 565.485 305.054C565.485 305.054 558.071 292.285 560.266 285.678Z" fill="white" />
+                <path d="M426.577 378.331C420.59 374.387 418.311 359.088 418.311 359.088C418.311 359.088 436 356.938 441.888 360.61C448.129 364.502 446.643 378.305 446.643 378.305C446.643 378.305 432.391 382.161 426.577 378.331Z" fill="white" />
+                <path d="M470.21 273.611C464.223 269.667 461.944 254.368 461.944 254.368C461.944 254.368 479.632 252.218 485.52 255.89C491.762 259.782 490.276 273.585 490.276 273.585C490.276 273.585 476.023 277.441 470.21 273.611Z" fill="white" />
+                <path d="M2003.71 160H1987.29L1978 601H2013L2003.71 160Z" fill="white" />
+                <path d="M1973.37 176.74L1978.98 161.295C1979.63 159.519 1979.48 157.55 1978.57 155.894C1976.51 152.146 1971.46 151.344 1968.34 154.269L1881.78 235.332C1880.81 236.244 1880.78 237.782 1881.73 238.725C1882.48 239.478 1883.64 239.634 1884.57 239.107L1954.36 199.283C1963.17 194.258 1969.9 186.269 1973.37 176.74Z" fill="white" />
+                <path d="M2032.77 150.374L2016.59 153.233C2014.73 153.561 2013.1 154.677 2012.12 156.294C2009.9 159.954 2011.73 164.721 2015.83 165.963L2129.31 200.394C2130.59 200.782 2131.93 200.035 2132.27 198.746C2132.55 197.717 2132.1 196.632 2131.18 196.095L2061.8 155.564C2053.05 150.45 2042.76 148.61 2032.77 150.374Z" fill="white" />
+                <path d="M1982.1 112.488L1992.67 125.075C1993.88 126.522 1995.67 127.375 1997.55 127.414C2001.83 127.503 2005.05 123.537 2004.08 119.371L1977.15 3.87643C1976.85 2.57675 1975.53 1.78615 1974.24 2.13155C1973.21 2.40702 1972.5 3.3362 1972.49 4.40054L1972.08 84.7549C1972.03 94.8944 1975.58 104.723 1982.1 112.488Z" fill="white" />
+                <path d="M2022 146.5C2022 160.583 2010.58 172 1996.5 172C1982.42 172 1971 160.583 1971 146.5C1971 132.417 1982.42 121 1996.5 121C2010.58 121 2022 132.417 2022 146.5Z" fill="white" />
+                <path d="M2193.92 246.111H2180.26L2172.53 613H2201.65L2193.92 246.111Z" fill="white" />
+                <path d="M2168.68 260.038L2173.35 247.189C2173.89 245.711 2173.76 244.073 2173 242.696C2171.29 239.577 2167.09 238.91 2164.49 241.343L2092.48 308.784C2091.67 309.543 2091.65 310.822 2092.44 311.607C2093.06 312.233 2094.03 312.363 2094.8 311.924L2152.86 278.793C2160.19 274.613 2165.79 267.966 2168.68 260.038Z" fill="white" />
+                <path d="M2218.1 238.103L2204.63 240.481C2203.09 240.755 2201.73 241.683 2200.92 243.028C2199.07 246.073 2200.59 250.039 2204 251.073L2298.41 279.717C2299.47 280.04 2300.59 279.418 2300.88 278.346C2301.11 277.49 2300.74 276.587 2299.97 276.141L2242.25 242.421C2234.96 238.166 2226.41 236.636 2218.1 238.103Z" fill="white" />
+                <path d="M2175.94 206.584L2184.74 217.056C2185.75 218.26 2187.23 218.969 2188.8 219.002C2192.36 219.076 2195.03 215.777 2194.23 212.31L2171.83 116.225C2171.57 115.144 2170.48 114.486 2169.4 114.773C2168.55 115.003 2167.95 115.776 2167.95 116.661L2167.61 183.512C2167.57 191.947 2170.52 200.124 2175.94 206.584Z" fill="white" />
+                <path d="M2209.14 234.88C2209.14 246.597 2199.64 256.095 2187.92 256.095C2176.21 256.095 2166.71 246.597 2166.71 234.88C2166.71 223.164 2176.21 213.666 2187.92 213.666C2199.64 213.666 2209.14 223.164 2209.14 234.88Z" fill="white" />
+            </svg>
+        </div>
+        <div class="scroll-shift position-absolute w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 826" fill="none">
+                <path d="M0 8.00003C0 8.00003 101.052 77.6069 288 92C553.709 112.457 873.047 -35.3072 1136 8.00003C1356.43 44.3041 1428.1 255.229 1651.5 256C1853.67 256.698 1933.21 106.411 2129 56C2233.08 29.2003 2400 8.00003 2400 8.00003V825.5H0V8.00003Z" fill="white" />
+            </svg>
+        </div>
+    </section>
+
+    <section id="2">
+        <div class="position-relative">
+            <div class="w-100 position-absolute">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 717" fill="none">
+                    <rect x="1288.96" y="452.275" width="72" height="46" rx="20" transform="rotate(-16.3102 1288.96 452.275)" fill="black" />
+                    <path d="M1282.36 493.801C1279.26 483.2 1285.34 472.091 1295.94 468.989L1362.64 449.471C1372.45 446.602 1382.72 452.225 1385.59 462.031C1388.46 471.837 1382.84 482.113 1373.03 484.982L1291.93 508.713C1289.28 509.488 1286.51 507.969 1285.73 505.318L1283.76 498.6L1282.36 493.801Z" fill="black" />
+                    <path d="M1277.55 504.065C1278.09 505.921 1280.04 506.984 1281.89 506.442L1285.73 505.318L1283.76 498.6L1279.92 499.723C1278.07 500.266 1277.01 502.21 1277.55 504.065Z" fill="black" />
+                    <circle cx="1308.26" cy="495.079" r="14.5" transform="rotate(-16.3102 1308.26 495.079)" fill="black" />
+                    <circle cx="1364.89" cy="478.509" r="14.5" transform="rotate(-16.3102 1364.89 478.509)" fill="black" />
+                    <rect x="1505.4" y="407.226" width="72" height="46" rx="20" transform="rotate(2.75527 1505.4 407.226)" fill="black" />
+                    <path d="M1485.6 444.317C1486.13 433.284 1495.5 424.77 1506.53 425.301L1575.95 428.642C1586.16 429.133 1594.03 437.804 1593.54 448.01C1593.05 458.215 1584.38 466.09 1574.18 465.599L1489.77 461.537C1487.02 461.405 1484.89 459.061 1485.02 456.303L1485.36 449.311L1485.6 444.317Z" fill="black" />
+                    <path d="M1477.7 452.446C1477.6 454.377 1479.09 456.017 1481.02 456.11L1485.02 456.303L1485.36 449.311L1481.36 449.119C1479.43 449.026 1477.79 450.515 1477.7 452.446Z" fill="black" />
+                    <circle cx="1509.66" cy="453.984" r="14.5" transform="rotate(2.75527 1509.66 453.984)" fill="black" />
+                    <circle cx="1568.59" cy="456.821" r="14.5" transform="rotate(2.75527 1568.59 456.821)" fill="black" />
+                    <rect x="1726.18" y="414.314" width="72" height="46" rx="20" transform="rotate(-9.15142 1726.18 414.314)" fill="black" />
+                    <path d="M1714.45 454.693C1712.69 443.788 1720.11 433.524 1731.01 431.767L1799.63 420.713C1809.72 419.088 1819.21 425.948 1820.84 436.035C1822.46 446.123 1815.6 455.617 1805.51 457.242L1722.09 470.681C1719.36 471.121 1716.8 469.267 1716.36 466.54L1715.24 459.629L1714.45 454.693Z" fill="black" />
+                    <path d="M1708.4 464.278C1708.7 466.186 1710.5 467.484 1712.41 467.177L1716.36 466.54L1715.24 459.629L1711.29 460.266C1709.39 460.573 1708.09 462.369 1708.4 464.278Z" fill="black" />
+                    <circle cx="1739.99" cy="459.188" r="14.5" transform="rotate(-9.15142 1739.99 459.188)" fill="black" />
+                    <circle cx="1798.24" cy="449.805" r="14.5" transform="rotate(-9.15142 1798.24 449.805)" fill="black" />
+                    <circle cx="1266.56" cy="506.438" r="5.5" transform="rotate(-8.0124 1266.56 506.438)" fill="black" />
+                    <circle cx="1249.89" cy="499.191" r="8" transform="rotate(-8.0124 1249.89 499.191)" fill="black" />
+                    <circle cx="1224.86" cy="497.16" r="10.5" transform="rotate(-8.0124 1224.86 497.16)" fill="black" />
+                    <circle cx="1462.5" cy="448.5" r="5.5" fill="black" />
+                    <circle cx="1450" cy="432" r="8" fill="black" />
+                    <circle cx="1428.5" cy="420.5" r="10.5" fill="black" />
+                    <circle cx="1698.5" cy="460.5" r="5.5" fill="black" />
+                    <circle cx="1686" cy="444" r="8" fill="black" />
+                    <circle cx="1664.5" cy="432.5" r="10.5" fill="black" />
+                    <path d="M182 316.615H248.894H315.789H382.683H449.578H585C587.209 316.615 589 318.406 589 320.615V472C589 474.209 587.209 476 585 476H186C183.791 476 182 474.209 182 472V316.615Z" fill="black" />
+                    <path d="M248.894 276.757C248.894 273.507 245.223 271.613 242.575 273.498L182 316.615H248.894V276.757Z" fill="black" />
+                    <path d="M315.789 276.757C315.789 273.507 312.117 271.613 309.469 273.498L248.894 316.615H315.789V276.757Z" fill="black" />
+                    <path d="M382.683 276.757C382.683 273.507 379.012 271.613 376.364 273.498L315.789 316.615H382.683V276.757Z" fill="black" />
+                    <path d="M449.578 276.757C449.578 273.507 445.906 271.613 443.258 273.498L382.683 316.615H449.578V276.757Z" fill="black" />
+                    <rect x="473" y="191" width="40" height="199" rx="4" fill="black" />
+                    <rect x="549" y="191" width="40" height="199" rx="4" fill="black" />
+                    <circle cx="574" cy="169" r="14" fill="black" />
+                    <circle cx="595.5" cy="133.5" r="21.5" fill="black" />
+                    <circle cx="643" cy="95" r="26" fill="black" />
+                    <circle cx="715.5" cy="53.5" r="41.5" fill="black" />
+                    <circle cx="491" cy="169" r="14" fill="black" />
+                    <circle cx="512.5" cy="133.5" r="21.5" fill="black" />
+                    <circle cx="545.5" cy="81.5" r="28.5" fill="black" />
+                    <circle cx="608.5" cy="34.5" r="34.5" fill="black" />
+                </svg>
+            </div>
+            <div class="w-100">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 717" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M331 406.5C144.052 392.107 0 473.993 0 473.993V717H2400V380C2400 380 2150.58 379.701 2046.5 406.5C2019.74 413.391 1994.9 420.005 1971.48 426.242C1823.57 465.63 1732.17 489.97 1569 473.993C1461.68 463.484 1359.86 496.393 1258.45 529.171C1149.76 564.301 1041.53 599.281 927.5 580.5C805.721 560.444 725.79 526.032 648.672 492.832C559.273 454.344 473.653 417.483 331 406.5Z" fill="black" />
+                </svg>
+                <div class="bg-black text-white p-5">
+                    <div class="text-center mr-auto ml-auto">
+                        <h1 class="m-0">The average EU citizen produces 8X<br />more CO2 than is sustainable</h1>
+                    </div>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 251" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2400 144.993C2400 144.993 1973.76 217.499 1698 239C1035.88 290.627 0 144.993 0 144.993V0H2400V144.993Z" fill="black" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="3" class="">
+        <div class="p-4 text-center">
+            <h1>Zeeco can help you neutralise<br />your emmisions</h1><br />
+            <div class="container">
+                <h3>How much would you be willing to contribute to offset your footprint each month?</h3>
+                <div class="position-relative" style="height: 200px;">
+                    <input type="text" class="js-range-slider" name="my_range" value="" />
+                    <div class="highlight" style="left: calc(37.5% - 9px)">
+                        <div class="highlight-body">European Average Footprint</div>
+                    </div>
+                    <div class="highlight" style="left: calc(80% - 9px)">
+                        <div class="highlight-body">Australian Average Footprint</div>
+                    </div>
+                    <div class="highlight" style="left: calc(100% - 9px)">
+                        <div class="highlight-body">American Average Footprint</div>
+                    </div>
+                </div>
+                <h4>Offsets up to <span id="OffsetValue">0.75T</span> of CO2 each month</h4>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h4>Zeeco automatically calculates Your unique carbon footprint by analysing your situation and expenses*</h4>
+            <h5>*Through bank integration software trusted by over 23 million people and companies like Microsoft and ING bank</h5>
+            <label>Learn More</label>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h4>You only pay for your own footprint, up to the maximum contribution you specified</h4>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h4>We offset your footprint by planting trees and investing in renewable energy and green projects for your community</h4>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h4>You can see what your contributions have achieved<br />And learn ways to reduce your footprint</h4>
+        </div>
+    </section>
+</main>
+
+
+
+<div style="display: none" id="ScrollWheel">
+    <svg width="26px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+        <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke: #00DEA3;stroke-width:30px;" />
+        <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:rgba(0, 0, 0, 0.40);stroke-width:12px;" />
+    </svg>
+</div>
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/Scripts/Plugins/Range/js/ion.rangeSlider.js"></script>
+    @*<script src="~/Scripts/Plugins/Masonry/masonry-docs.min.js"></script>*@
+    <script src="~/Scripts/Plugins/Scrollify/Scrollify.js"></script>
+    <script>
+
+        $(function () {
+
+            $(".js-range-slider").ionRangeSlider({
+                skin: "round",
+                type: "double",
+                min: 0,
+                max: 20,
+                from: 2.5,
+                to: 7.5,
+                grid_snap: true,
+                step: 0.5,
+                prefix: "€"
+            });
+
+            $(".js-range-slider").on("change", function () {
+                var $inp = $(this);
+                var Value = parseFloat($inp.data("to")); // reading input value
+                console.log(Value)
+                var CO2Offset = Value / 10.0
+                $('#OffsetValue').html(CO2Offset)
+
+
+
+            });
+
+            setTimeout(function () {
+                $('#ScrollWheel').fadeIn(200);
+
+                setTimeout(function () {
+                    $('#ScrollWheel').fadeOut(200);
+                }, 5000)
+            }, 1000)
+        })
+
+        function ScrollToSection(elm) {
+            Scrolling = true;
+            $('section.active').removeClass('active').addClass('ShiftOut').removeClass('ShiftIn');;
+            $('html, body').animate({
+                scrollTop: $(elm).offset().top
+            }, 800);
+
+            setTimeout(function () {
+                $('.section-indicator.active').removeClass('active')
+                $('a.section-indicator[href="#' + $(elm).attr('id') + '"]').addClass('active');
+                $(elm).addClass('active').addClass('ShiftIn');
+                $('.ShiftOut').removeClass('ShiftOut');
+                Scrolling = false;
+            }, 1000)
+        }
+
+        ////Set Scroll
+        //    var Scrolling = false;
+        //    $(window).bind('mousewheel', function (e) {
+        //        var elm = $('section.active')
+        //        if ($(elm).length != 0 && !Scrolling) {
+        //            //var ScrollPosition = CheckScrollPosition(elm);
+        //            if (e.originalEvent.wheelDelta / 120 > 0) { // up
+        //             /*   if (ScrollPosition == 2 || ScrollPosition == 0) {*/ // top of div;
+        //                    var scrollTo = $(elm).prev('section');
+        //                    if ($(scrollTo).length != 0) { //prev elm
+        //                        ScrollToSection(scrollTo)
+        //                    }
+        //                //}
+        //            }
+        //            else { // down
+        //                $('#ScrollWheel').fadeOut(500);
+        //               /* if (ScrollPosition == 1 || ScrollPosition == 0) {*/ // bottom of div;
+        //                    var scrollTo = $(elm).next('section');
+        //                    if ($(scrollTo).length != 0) { //next elm
+        //                        ScrollToSection(scrollTo)
+        //                    }
+        //                //}
+        //            }
+        //        }
+        //    });
+
+        //function CheckScrollPosition(elm) {
+        //    var scrollTop = $(elm).scrollTop();
+        //    var windowHeight = window.innerHeight;
+        //    var elmScrollHeight = $(elm)[0].scrollHeight;
+        //    var Delta = (windowHeight - elmScrollHeight)
+
+        //    if (scrollTop == 0 && (Delta < 1 && Delta > -1)) {
+        //        return 0;
+        //    }
+        //    else if ((scrollTop + windowHeight + 2) >= elmScrollHeight) {
+        //        return 1;
+        //    } else if (scrollTop <= 0) {
+        //        return 2;
+        //    } else {
+        //        return null;
+        //    }
+        //}
+
+        //Smooth Scrolling
+
+        $('a.section-indicator')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $('section.active').removeClass('active');
+                            $target.addClass('active')
+
+                            $('.section-indicator.active').removeClass('active')
+                            $('a.section-indicator[href="#' + $target.attr('id') + '"]').addClass('active');
+
+                            $target.focus();
+
+
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+
+        // Sticky navbar
+        // =========================
+        $(document).ready(function () {
+
+            // Custom function which toggles between sticky class (is-sticky)
+            var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
+                var stickyHeight = sticky.outerHeight();
+                var stickyTop = stickyWrapper.offset().top;
+                if (scrollElement.scrollTop() >= stickyTop) {
+                    if (!sticky.hasClass('is-sticky')) {
+                        stickyWrapper.height(stickyHeight);
+                        sticky.addClass("is-sticky");
+
+                    }
+                }
+                else {
+                    sticky.removeClass("is-sticky");
+                    stickyWrapper.height('auto');
+                }
+            };
+
+            // Find all data-toggle="sticky-onscroll" elements
+            $('[data-toggle="sticky-onscroll"]').each(function () {
+                var sticky = $(this);
+                var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+                sticky.before(stickyWrapper);
+                sticky.addClass('sticky');
+
+                // Scroll & resize events
+                $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+                    stickyToggle(sticky, stickyWrapper, $(this));
+                });
+
+                // On page load
+                stickyToggle(sticky, stickyWrapper, $(window));
+            });
+        });
+
+
+        // Hide header on scroll down
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('header').outerHeight();
+
+        $(window).scroll(function (event) {
+            didScroll = true;
+            if ($(window).scrollTop() != 0) {
+                $('header').addClass('shadow-lg');
+            } else {
+                $('header').removeClass('shadow-lg');
+            }
+        });
+
+        setInterval(function () {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+
+            // Make scroll more than delta
+            if (Math.abs(lastScrollTop - st) <= delta)
+                return;
+
+            // If scrolled down and past the navbar, add class .nav-up.
+            if (st > lastScrollTop && st > navbarHeight) {
+                // Scroll Down
+                if ($(window).scrollTop() > 650) {
+                    $('header').removeClass('nav-down').addClass('nav-up');
+                }
+            } else {
+                // Scroll Up
+                if (st + $(window).height() < $(document).height()) {
+                    $('header').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+
+            lastScrollTop = st;
+        }
+
+    </script>
+}
+
+
+@*<div class="mobile-show text-center">
+        <div class="bg-green-grad p-5 h-100vh">
+            <div style="margin-top: 10vh" class="text-center text-white">
+                <img src="~/Content/Media/Zeeco/Zeeco-Logo-White.svg" class="mb-4" />
+                <h3>Do Good Effortlessly</h3>
+                <h3 class="text-white-50">Coming Soon</h3>
+            </div>
+        </div>
+        <div class="bg-black p-5 text-white">
+            <h3>
+                The average EU citizen produces 8X<br />
+                more CO2 than is sustainable
+            </h3>
+        </div>
+        <div class="p-5">
+            <h3>
+                Zeeco helps you neutralise your emmisions by investing in local eco projects.
+            </h3>
+        </div>
+        <div class="p-1">
+            <span data-sumome-listbuilder-embed-id="7cce4d444abd0add8e28697095831ea2fa543bc353e1a678539ed5f44693288d"></span>
+        </div>
+    </div>*@
+
+@*<div class="Indicators" id="SectionIndicators">
+        <a href="#1" class="section-indicator active"><span>Intro</span></a>
+        <a href="#2" class="section-indicator"><span>Portfolio</span></a>
+        <a href="#3" class="section-indicator"><span>About Me</span></a>
+    </div>*@
+
+@*<div class="w-75 mr-auto ml-auto text-center">
+        <div class="d-flex w-full mb-4">
+            <div class="">
+                <img style="width: 120px;" class="mb-4 mw-100" src="~/Content/Media/Zeeco/Automate.svg" />
+                <h4>Zeeco Automaically calculates your CO2 footprint</h4>
+            </div>
+            <div class="position-relative">
+                <img class="mw-100" src="~/Content/Media/Zeeco/Arrow-1.svg" />
+            </div>
+            <div class="">
+                <img style="width: 120px;" class="mb-4 mw-100" src="~/Content/Media/Zeeco/Offset.svg" />
+                <h4>You choose how much you want to offset</h4>
+            </div>
+            <div class="position-relative" style="padding-top: 8% !important">
+                <img class="mw-100" src="~/Content/Media/Zeeco/Arrow-2.svg" />
+            </div>
+            <div class="">
+                <img style="width: 120px;" class="mb-4 mw-100" src="~/Content/Media/Zeeco/Invest.svg" />
+                <h4>We Invests in local eco projects to balance it</h4>
+            </div>
+        </div>
+    </div>*@
+@*<section>
+        <span data-sumome-listbuilder-embed-id="7cce4d444abd0add8e28697095831ea2fa543bc353e1a678539ed5f44693288d"></span>
+    </section>*@
