@@ -20,8 +20,17 @@
             background: linear-gradient(to bottom, #ffffff 0%,#f8f9fa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f9fa',GradientType=0 ); /* IE6-9 */
         }
+
         .bg-blue-grad {
             background: linear-gradient(242.27deg, rgba(0, 209, 222, 0.64) 0%, rgba(67, 114, 169, 0.8) 90.29%);
+        }
+
+        .bg-dark-blue-grad {
+            background: linear-gradient(90deg, #2b2f3c 0%, #161a2a 100%);
+        }
+
+        .bg-dark-blue {
+            background: #2b2f3c;
         }
 
         .scroll-shift {
@@ -82,6 +91,10 @@
             border: 2px solid #fff;
             height: 42px;
         }
+            .hero-input .form-control.Invalid {
+                border-color: #fff;
+                border-left-color: #dc3545
+            }
 
         .hero-input .btn {
             border-radius: 100px;
@@ -108,9 +121,9 @@
             background: #343740;
         }
 
-        .text-secondary {
+        /*.text-secondary {
             color: #36ACB8;
-        }
+        }*/
 
         .btn-primary {
             background: #00dea3;
@@ -120,6 +133,11 @@
         .btn-outline-primary {
             color: #00dea3;
             border-color: #00dea3;
+        }
+
+        .btn-outline-secondary {
+            color: #00D1DE;
+            border-color: #00D1DE;
         }
 
         .text-grey-1 {
@@ -136,40 +154,53 @@
             justify-content: center;
             text-align: center;
         }
+
+        .storyboard content .story-height {
+            height: calc(100vh - 10rem);
+            margin: 5rem 0rem;
+            transition: 0.2s;
+        }
+
+        .storyboard content.active .story-height {
+            height: calc(100vh - 6rem);
+            margin: 3rem 0rem;
+        }
     </style>
-    @*<link href="~/Scripts/Plugins/Range/css/ion.range   Slider.css" rel="stylesheet" />*@
+    <link href="~/Scripts/Plugins/Range/css/ion.rangeSlider.css" rel="stylesheet" />
 }
 
-    <main role="main" id="Main">
-        <section id="Splash" class="bg-primary">
-            <div class="w-full Vertical-Align-Parent bg-blue-grad position-relative" style="height: 100vh;">
-                <div>
-                    <img class="position-absolute" style="left: 74px; top: 68px;" src="~/Content/Media/Zeeco/Assets/Star.svg" />
-                    <img class="position-absolute" style="left: 28px; top: 178px;" src="~/Content/Media/Zeeco/Assets/Star-1.svg" />
-                    <img class="position-absolute" style="left: 240px; top: 68px;" src="~/Content/Media/Zeeco/Assets/Star-2.svg" />
-                    <img class="position-absolute" style="right: 62px; top: 42px;" src="~/Content/Media/Zeeco/Assets/Moon.svg" />
-                </div>
+<main role="main" id="Main">
+    <section id="Splash">
 
-                <div class="container text-center text-white Vertical-Align">
-                    <img style="height: 40px" class="mb-4" src="~/Content/Media/Zeeco/Logo/Zeeco-Logo-Full-White.svg" />
-                    <div class="mb-5">
-                        <h1>Lets Clean The Sky</h1>
-                        <h3 class="text-light">We remove your carbon footprint by planting forests and<br />building renewable energy systems</h3>
+        <div class="w-full Vertical-Align-Parent bg-dark-blue-grad position-relative" style="height: 100vh;">
+            <img style="height: 28px; top: 32px; left: 48px;" class="position-absolute" src="~/Content/Media/Zeeco/Logo/Zeeco-Logo-Full-White.svg" />
+            <div class="container text-white">
+                <div class="row d-flex" style="height: 100vh;">
+                    <div class="col-md-6">
+                        <div class="Vertical-Align">
+                            <div class="mb-5">
+                                <h1>Do Good Effortlessly</h1>
+                                <h4 class="text-light">Remove your carbon footprint by planting forests and building renewable energy as you shop.</h4>
+                            </div>
+                            <div>
+                                <a href="#Intro" class="btn btn-outline-light border-round mr-2" style="width: 180px">Learn More</a>
+                                <button class="btn btn-outline-secondary border-round" onclick="OpenOptin()" style="width: 180px">Sign Up, Be a Hero</button>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <a href="#Intro" class="btn btn-outline-light border-round mr-2">Learn More</a>
-                        <button class="btn btn-light border-round">Sign Up, Be a Hero</button>
+                    <div class="col-md-6 text-center">
+                        <img class="Vertical-Align" src="~/Content/Media/Zeeco/Assets/Header-1.svg" />
                     </div>
                 </div>
             </div>
-            <br /><br />
-        </section>
-       
-        <section id="Intro" class="position-relative h-100vh">
-            <header id="Header" class="top right-abs Transition04 w-100" style="z-index:99">
+        </div>
+    </section>
+
+    <section id="Intro" class="position-relative h-100vh">
+        @*<header id="Header" class="top right-abs Transition04 w-100" style="z-index:99">
                 <nav class="py-1">
                     <div class="container d-flex flex-column flex-md-row">
-                      
+
                         <div class="right">
                             <a class="py-2 d-none d-md-inline-block mr-4 text-white Transition02" href="#">Human Impact</a>
                             <a class="py-2 d-none d-md-inline-block mr-4 text-white Transition02" href="#">Our Solution</a>
@@ -178,107 +209,106 @@
                         </div>
                     </div>
                 </nav>
-            </header>
-            <img class="top w-100" src="~/Content/Media/Zeeco/Assets/Hero-Bg.svg" />
-            <div class="container">
-                <div class="row pt-5">
-                    <div class="col-md-6">
-                        <div class="text-left text-white pt-5">
-                            <div class="mb-5">
-                                <h2>Do Good Effortlessly</h2>
-                                <h5>Reduce your carbon footprint as you shop</h5>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-green">Sign up to get notified when we launch</h6>
-                            </div>
-                            <div class="w-400px">
-                                <div class="d-flex hero-input">
-                                    <input class="form-control" placeholder="Enter your email. Be a Hero" />
-                                    <button class="btn btn-primary">Join Us</button>
-                                </div>
+            </header>*@
+        <img class="top w-100" src="~/Content/Media/Zeeco/Assets/Green Background.svg" />
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-md-6">
+                    <div class="text-left text-white pt-5">
+                        <div class="mb-4">
+                            <h2>Our Mission</h2>
+                            <h5>
+                                To make carbon neutrality easy and affordable for everyone<br />
+                                without having to change the way you live your life.
+                            </h5>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-green">Sign up to get notified when we launch</h6>
+                        </div>
+                        <div class="w-400px">
+                            <div class="d-flex hero-input">
+                                <input class="form-control" onkeyup="ValidateEmail(this)" onchange="$('#EmailInput').val(value)" id="EmailInput-1" placeholder="Enter your email. Be a Hero" />
+                                <button class="btn btn-primary" onclick="OpenOptin('#EmailInput-1')">Join Us</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <section class="position-relative">
-            <div class="container py-3">
-                <img class="center" src="~/Content/Media/Zeeco/Assets/Mission-Icon.svg" /><br />
-                <h2 class="text-center text-secondary ">Our Mission</h2>
-                <h4 class="text-center text-grey-1">
-                    <br />
-                    To make carbon neutrality easy and affordable for everyone<br />
-                    without having to change the way you live your life.
-                </h4>
-                <div class="row text-grey-2 pb-5">
-                    <div class="col-md-4">
-                        <div class="p-3 text-center">
-                            <img src="~/Content/Media/Zeeco/Assets/Pill-1.svg" />
-                            <h5 class="text-center">Zeeco Automaically calculates your CO2 footprint</h5>
-                        </div>
+    <section class="position-relative">
+        <div class="container py-3">
+            <img class="center" src="~/Content/Media/Zeeco/Assets/Mission-Icon.svg" /><br />
+            <h2 class="text-center text-secondary ">The Easiest Way To Manage Your Environmental Impact</h2>
+            <h4 class="text-center text-grey-1"></h4>
+            <div class="row text-grey-2 pb-5">
+                <div class="col-md-4">
+                    <div class="p-3 text-center">
+                        <img src="~/Content/Media/Zeeco/Assets/Pill-1.svg" />
+                        <h5 class="text-center">Zeeco automaically calculates your CO2 footprint</h5>
                     </div>
-                    <div class="col-md-4">
-                        <div class="p-3 text-center">
-                            <img src="~/Content/Media/Zeeco/Assets/Pill-2.svg" />
-                            <h5 class="text-center">You choose how much you want to offset</h5>
-                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 text-center">
+                        <img src="~/Content/Media/Zeeco/Assets/Pill-2.svg" />
+                        <h5 class="text-center">You choose how much you want to offset</h5>
                     </div>
-                    <div class="col-md-4">
-                        <div class="p-3 text-center">
-                            <img src="~/Content/Media/Zeeco/Assets/Pill-3.svg" />
-                            <h5 class="text-center">We Invests in local eco projects to balance it</h5>
-                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 text-center">
+                        <img src="~/Content/Media/Zeeco/Assets/Pill-3.svg" />
+                        <h5 class="text-center">We invests in local eco projects to balance it</h5>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 
-        <section id="menu" style="height: calc(100vh - 6rem)">
-            <div class="p-5">
-                <div class="position-relative Vertical-Align-Parent" style="height: calc(100vh - 12rem)">
-                    <div class="page-overlay-dark abs Vertical-Align-Parent" id="menu-overlay">
-                        <div class="Vertical-Align">
-                            <div class="container p-5">
-                                <h3 class="text-white">See How Zeeco can empower you to<br />neutralize your carbon footprint</h3><br />
-                                <button onclick="$('#menu-overlay').fadeOut(400); $('#menu').addClass('open')" class="btn btn-secondary btn-lg rounded"><span>Learn More</span></button>
-                            </div>
+    <section id="menu" style="height: calc(100vh - 6rem)">
+        <div class="p-5">
+            <div class="position-relative Vertical-Align-Parent" style="height: calc(100vh - 12rem)">
+                <div class="page-overlay-dark abs Vertical-Align-Parent" id="menu-overlay">
+                    <div class="Vertical-Align">
+                        <div class="container p-5">
+                            <h3 class="text-white">See How Zeeco can empower you to<br />neutralize your carbon footprint</h3><br />
+                            <button onclick="$('#menu-overlay').fadeOut(400); $('#menu').addClass('open')" class="btn btn-secondary btn-lg rounded"><span>Learn More</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex Vertical-Align w-100">
+                    <div class="img-tile w-100" onclick="OpenStory('Problem-Story')">
+                        <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Tiles/Menu-1.png')">
+                            <span class="img-tile-overlay"></span>
+                        </span>
+                        <div class="img-tile-body text-light">
+                            <h2>The Struggle</h2>
                         </div>
                     </div>
 
-                    <div class="d-flex Vertical-Align w-100">
-                        <div class="img-tile w-100" onclick="OpenStory('Problem-Story')">
-                            <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Tiles/Menu-1.png')">
-                                <span class="img-tile-overlay"></span>
-                            </span>
-                            <div class="img-tile-body text-light">
-                                <h2>The Struggle</h2>
-                            </div>
+                    <div class="img-tile w-100" onclick="OpenStory('Mission-Story')">
+                        <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Tiles/Menu-3.png')">
+                            <span class="img-tile-overlay"></span>
+                        </span>
+                        <div class="img-tile-body text-light">
+                            <h2>Our Solution</h2>
                         </div>
+                    </div>
 
-                        <div class="img-tile w-100" onclick="OpenStory('Mission-Story')">
-                            <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Tiles/Menu-3.png')">
-                                <span class="img-tile-overlay"></span>
-                            </span>
-                            <div class="img-tile-body text-light">
-                                <h2>Our Mission</h2>
-                            </div>
+                    <div class="img-tile w-100" onclick="OpenOptin()">
+                        <span class="img-tile-bg img-cover bg-dark05">
+                            <span class="img-tile-overlay"></span>
+                        </span>
+                        <div class="img-tile-body text-light">
+                            <h2>Join us. Be a Hero</h2>
                         </div>
+                    </div>
 
-                        <div class="img-tile w-100" onclick="OpenStory('Solution-Story')">
-                            <span class="img-tile-bg img-cover bg-dark05">
-                                <span class="img-tile-overlay"></span>
-                            </span>
-                            <div class="img-tile-body text-light">
-                                <h2>Our Solution</h2>
-                            </div>
-                        </div>
-
-                        @*<div class="img-tile w-100" onclick="OpenStory('Signup-Story')">
+                    @*<div class="img-tile w-100" onclick="OpenStory('Signup-Story')">
                             <span class="img-tile-bg img-cover bg-dark05">
                                 <span class="img-tile-overlay"></span>
                             </span>
@@ -286,52 +316,49 @@
                                 <h2>Join Us</h2>
                             </div>
                         </div>*@
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="position-relative h-100vh">
-
-            <img class="bottom" style="z-index: 1;" src="~/Content/Media/Zeeco/Assets/Background-2.svg" />
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 h-100vh position-relative">
-                        <div class="">
-                            <div class="Absolute-Center position-absolute" style="width: 100%; z-index: 1">
-                                <img src="/Content/Media/Zeeco/Assets/Phone.svg">
-                            </div>
-                            <div class="Absolute-Center position-absolute" style="width: 100%;height: 100vh;z-index: -1;">
-                                <img src="/Content/Media/Zeeco/Assets/Phone-Outline.svg">
-                            </div>
+    <section class="position-relative h-100vh noscroll">
+        <img class="bottom" style="z-index: 1;" src="~/Content/Media/Zeeco/Assets/Background-2.svg" />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 h-100vh position-relative">
+                    <div class="">
+                        <div class="Absolute-Center position-absolute" style="width: 100%; height: 100vh; z-index: 1">
+                            <img src="~/Content/Media/Zeeco/Assets/Phone-Alt.svg">
                         </div>
-                    </div>
-                    <div class="col-md-6 Vertical-Align-Parent h-100vh position-relative" style="z-index: 1;">
-                        <div class="Vertical-Align">
-                            <div class="mb-4">
-                                <h2 class="text-secondary">
-                                    Affordable, Effortless Neutrality
-                                </h2><br />
-                                <h5 class="text-grey-1">Zeeco will analyse your personal situation and expenses to calculate your individual footprint and help you work towareds reducing it.</h5>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-secondary">Sign up to get notified when we launch</h6>
-                            </div>
-                            <div class="w-400px">
-                                <div class="d-flex hero-input">
-                                    <input class="form-control" placeholder="Enter your email. Be a Hero" />
-                                    <button class="btn btn-primary">Join Us</button>
-                                </div>
-                            </div>
+                        <div class="Absolute-Center position-absolute" style="width: 100%; height: 100vh; z-index: -1;">
+                            <img src="/Content/Media/Zeeco/Assets/Phone-Outline.svg">
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 Vertical-Align-Parent h-100vh position-relative" style="z-index: 1;">
+                    <div class="Vertical-Align">
+                        <div class="mb-4">
+                            <h2 class="text-secondary">
+                                Learn More About Your Impact
+                            </h2><br />
+                            <h5 class="text-grey-1">Zeeco will analyse your personal situation and expenses to calculate your individual footprint and help you work towareds reducing it.</h5>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-secondary">Sign up to get notified when we launch</h6>
+                        </div>
+                        <div class="w-400px">
+                            <div class="d-flex hero-input">
+                                <input class="form-control" onkeyup="ValidateEmail(this)" onchange="$('#EmailInput').val(value)" id="EmailInput-2" placeholder="Enter your email. Be a Hero" />
+                                <button class="btn btn-primary" onclick="OpenOptin('#EmailInput-2')">Join Us</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-
-        </section>
-
-        @*<section id="1" class="position-relative active">
+    @*<section id="1" class="position-relative active">
             <div class="bg-green-grad h-100vh bg-green-grad">
                 <div class="container">
                     <div style="padding-top: 20vh" class="center text-white">
@@ -391,44 +418,62 @@
         </section>*@
 
 
-        <footer class="p-4">
-            <div class="container text-white-50">
-                <p class="mb-0">&copy; @DateTime.Now.Year - Zeeco App</p>
-            </div>
-        </footer>
-    </main>
+    <footer class="p-4">
+        <div class="container text-white-50">
+            <p class="mb-0">&copy; @DateTime.Now.Year - Zeeco App</p>
+        </div>
+    </footer>
+</main>
 
 <div class="storyblock" hidden id="Problem-Story">
     @Html.Partial("~/Views/Home/Story.cshtml")
 </div>
 
-@*<div class="storyblock" hidden id="Mission-Story">
+<div class="storyblock" hidden id="Mission-Story">
     @Html.Partial("~/Views/Home/Mission.cshtml")
 </div>
 
 <div class="storyblock" hidden id="Solution-Story">
     @Html.Partial("~/Views/Home/Solution.cshtml")
-</div>*@
+</div>
 
 <div hidden id="Optin" class="page-overlay">
+    <div class="p-3 fixed-top">
+        <h1 onclick="$('#Optin').fadeOut(200)" class="close float-left text-white">&times;</h1>
+    </div>
     <div class="row">
-        <div class="col-6 h-100vh Vertical-Align-Parent">
-            <div class="p-5 Vertical-Align">
-                <h3></h3>
+        <div class="col-5 h-100vh Vertical-Align-Parent bg-dark-blue">
+            <div class="p-5 Vertical-Align text-white">
+                <h3>Zeeco is still under development. Sign up now and we will let you know when we launch.</h3>
             </div>
         </div>
-        <div class="col-6 h-100vh Vertical-Align-Parent">
+        <div class="col-7 h-100vh Vertical-Align-Parent">
             <div class="p-5 Vertical-Align">
                 <div class="mb-4">
                     <label>How much of your footprint would you like to offset each month?</label>
-                    <div>
-
+                    <div class="mb-3">
+                        <input class="js-range-slider" id="ValueRange" />
+                    </div>
+                    <div class="position-relative">
+                        <span class="position-absolute"></span>
+                        <span class="position-absolute"></span>
+                        <span class="position-absolute"></span>
                     </div>
                 </div>
                 <div class="mb-4">
                     <label>What type of projects would you most like to support to offset your footprint?</label>
-                    <select></select>
+                    <select class="form-control" id="ProjectType" onchange="ValidateNotBlank()" >
+                        <option value="">Please Select</option>
+                        <option>Reforestation</option>
+                        <option>Renewable Energy</option>
+                        <option>Energy Efficency</option>
+                    </select>
                 </div>
+                <div class="mb-4">
+                    <label>What is your email address</label>
+                    <input class="form-control" id="EmailInput" onkeypress="ValidateEmail(this)" type="email" />
+                </div>
+                <button class="btn btn-outline-primary border-round" onclick="Optin()">Sign Up</button>
             </div>
         </div>
     </div>
@@ -436,11 +481,11 @@
 
 
 <div style="display: none" id="ScrollWheel">
-        <svg width="26px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-            <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff; stroke-width:30px;" />
-            <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none; stroke:#fff; stroke-width:12px;" />
-        </svg>
-    </div>
+    <svg width="26px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+        <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff; stroke-width:30px;" />
+        <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none; stroke:#fff; stroke-width:12px;" />
+    </svg>
+</div>
 
 
 
@@ -449,29 +494,10 @@
 
 @section Scripts{
     <script src="~/Scripts/Plugins/Range/js/ion.rangeSlider.js"></script>
-    @*<script src="~/Scripts/Plugins/Masonry/masonry-docs.min.js"></script>*@
     <script src="~/Scripts/Plugins/Scrollify/Scrollify.js"></script>
+    <script src="~/Scripts/PageScripts/Index.js"></script>
+
     <script>
-        function OpenStory(story) {
-            $('#Main').fadeOut(400);
-            HorizontalScroll = true;
-            setTimeout(function () {
-                $('#' + story).fadeIn(200).addClass('open');
-                setTimeout(function () {
-                    $('#' + story).find('content').first().addClass('active')
-                }, 200)
-            }, 500)
-        };
-
-        function OpenMain() {
-            $('.storyblock').fadeOut(400).removeClass('open');
-            HorizontalScroll = false;
-            setTimeout(function () {
-                $('#Main').fadeIn(200)
-            }, 500)
-        };
-
-
         $(function () {
 
             $(".js-range-slider").ionRangeSlider({
@@ -502,233 +528,5 @@
                 }, 5000)
             }, 1000)
         })
-
-        function ScrollToSection(elm) {
-            Scrolling = true;
-            $('section.active').removeClass('active');
-            $('html, body').animate({
-                scrollTop: $(elm).offset().top
-            }, 800);
-
-            setTimeout(function () {
-                $('.section-indicator.active').removeClass('active')
-                $('a.section-indicator[href="#' + $(elm).attr('id') + '"]').addClass('active');
-                $(elm).addClass('active');
-                Scrolling = false;
-            }, 1000)
-        }
-
-        function ScrollToStory(elm) {
-            Scrolling = true;
-            $('content.active').removeClass('active');
-            var width = $(window).outerWidth();
-            var count = $(elm).prevAll().length;
-            console.log(count);
-            console.log(width);
-            $('.storyblock.open .storyboard').animate({
-                scrollLeft: (width * count)
-            }, 800);
-            console.log($(elm).offset().left);
-            setTimeout(function () {
-                $(elm).addClass('active');
-                Scrolling = false;
-            }, 1000)
-        }
-
-        //Set Scroll
-        var Scrolling = false;
-        var HorizontalScroll = false;
-        $(window).bind('mousewheel', function (e) {
-
-            if (!HorizontalScroll) {
-                //var elm = $('section.active');
-                //if ($(elm).length != 0 && !Scrolling) {
-                //    if (e.originalEvent.wheelDelta / 120 > 0) { // up
-                //        var scrollTo = $(elm).prev('section');
-                //        if ($(scrollTo).length != 0) { //prev elm
-                //            ScrollToSection(scrollTo)
-                //        }
-                //    }
-                //    else { // down
-                //        $('#ScrollWheel').fadeOut(500);
-                //        var scrollTo = $(elm).next('section');
-                //        if ($(scrollTo).length != 0) { //next elm
-                //            ScrollToSection(scrollTo)
-                //        }
-                //    }
-                //}
-            } else {
-                var elm = $('content.active');
-                if ($(elm).length != 0 && !Scrolling) {
-                    if (e.originalEvent.wheelDelta / 120 > 0) { // up
-                        var scrollTo = $(elm).prev('content');
-                        if ($(scrollTo).length != 0) { //prev elm
-                            ScrollToStory(scrollTo)
-                        }
-                    }
-                    else { // down
-                        var scrollTo = $(elm).next('content');
-                        if ($(scrollTo).length != 0) { //next elm
-                            ScrollToStory(scrollTo)
-                        }
-                    }
-                }
-            }
-        });
-
-        function CheckScrollPosition(elm) {
-            var scrollTop = $(elm).scrollTop();
-            var windowHeight = window.innerHeight;
-            var elmScrollHeight = $(elm)[0].scrollHeight;
-            var Delta = (windowHeight - elmScrollHeight)
-
-            if (scrollTop == 0 && (Delta < 1 && Delta > -1)) {
-                return 0;
-            }
-            else if ((scrollTop + windowHeight + 2) >= elmScrollHeight) {
-                return 1;
-            } else if (scrollTop <= 0) {
-                return 2;
-            } else {
-                return null;
-            }
-        }
-
-        ////Smooth Scrolling
-
-        //$('a.section-indicator')
-        //    // Remove links that don't actually link to anything
-        //    .not('[href="#"]')
-        //    .not('[href="#0"]')
-        //    .click(function (event) {
-        //        // On-page links
-        //        if (
-        //            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-        //            &&
-        //            location.hostname == this.hostname
-        //        ) {
-        //            // Figure out element to scroll to
-        //            var target = $(this.hash);
-        //            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        //            // Does a scroll target exist?
-        //            if (target.length) {
-        //                // Only prevent default if animation is actually gonna happen
-        //                event.preventDefault();
-        //                $('html, body').animate({
-        //                    scrollTop: target.offset().top
-        //                }, 1000, function () {
-        //                    // Callback after animation
-        //                    // Must change focus!
-        //                    var $target = $(target);
-        //                    $('section.active').removeClass('active');
-        //                    $target.addClass('active')
-
-        //                    $('.section-indicator.active').removeClass('active')
-        //                    $('a.section-indicator[href="#' + $target.attr('id') + '"]').addClass('active');
-
-        //                    $target.focus();
-
-
-        //                    if ($target.is(":focus")) { // Checking if the target was focused
-        //                        return false;
-        //                    } else {
-        //                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-        //                        $target.focus(); // Set focus again
-        //                    };
-        //                });
-        //            }
-        //        }
-        //    });
-
-        // Sticky navbar
-        // =========================
-        $(document).ready(function () {
-
-            // Custom function which toggles between sticky class (is-sticky)
-            var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
-                var stickyHeight = sticky.outerHeight();
-                var stickyTop = stickyWrapper.offset().top;
-                if (scrollElement.scrollTop() >= stickyTop) {
-                    if (!sticky.hasClass('is-sticky')) {
-                        stickyWrapper.height(stickyHeight);
-                        sticky.addClass("is-sticky");
-
-                    }
-                }
-                else {
-                    sticky.removeClass("is-sticky");
-                    stickyWrapper.height('auto');
-                }
-            };
-
-            // Find all data-toggle="sticky-onscroll" elements
-            $('[data-toggle="sticky-onscroll"]').each(function () {
-                var sticky = $(this);
-                var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
-                sticky.before(stickyWrapper);
-                sticky.addClass('sticky');
-
-                // Scroll & resize events
-                $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
-                    stickyToggle(sticky, stickyWrapper, $(this));
-                });
-
-                // On page load
-                stickyToggle(sticky, stickyWrapper, $(window));
-            });
-        });
-
-
-        // Hide header on scroll down
-        var didScroll;
-        var lastScrollTop = 0;
-        var delta = 5;
-        var navbarHeight = $('header').outerHeight();
-
-        //$(window).scroll(function (event) {
-        //    didScroll = true;
-        //    if ($(window).scrollTop() != 0) {
-        //        $('#Header-Logo').fadeIn(200);
-        //        $('header').addClass('shadow-lg').addClass('bg-white');
-        //        $('header').find('.text-white').addClass('text-dark').removeClass('text-white')
-        //        $('header').find('.btn-outline-light').addClass('btn-outline-primary').removeClass('btn-outline-light')
-        //    } else {
-        //        $('#Header-Logo').fadeOut(200);
-        //        $('header').removeClass('shadow-lg').removeClass('bg-white');
-        //        $('header').find('.text-dark').removeClass('text-dark').addClass('text-white')
-        //        $('header').find('.btn-outline-primary').removeClass('btn-outline-primary').addClass('btn-outline-light')
-        //    }
-        //});
-
-        setInterval(function () {
-            if (didScroll) {
-                hasScrolled();
-                didScroll = false;
-            }
-        }, 250);
-
-        function hasScrolled() {
-            var st = $(this).scrollTop();
-
-            // Make scroll more than delta
-            if (Math.abs(lastScrollTop - st) <= delta)
-                return;
-
-            // If scrolled down and past the navbar, add class .nav-up.
-            if (st > lastScrollTop && st > navbarHeight) {
-                // Scroll Down
-                if ($(window).scrollTop() > 650) {
-                    $('header').removeClass('nav-down').addClass('nav-up');
-                }
-            } else {
-                // Scroll Up
-                if (st + $(window).height() < $(document).height()) {
-                    $('header').removeClass('nav-up').addClass('nav-down');
-                }
-            }
-
-            lastScrollTop = st;
-        }
-
     </script>
 }

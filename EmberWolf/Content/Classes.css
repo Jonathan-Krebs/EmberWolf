@@ -272,7 +272,22 @@ svg #wheel {
     right: 50%;
 }
 
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #bbb;
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #bbb;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: #bbb;
+}
 #SectionIndicators {
     position: fixed;
     top: 35vh;
+}
+
+.storyblock{
+    transition: 0.2s;
 }

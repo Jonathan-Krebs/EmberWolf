@@ -15,15 +15,15 @@ body::-webkit-scrollbar {
     background-color: #fff
 }
 
-body::-webkit-scrollbar-thumb {
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: 0.2s !important;
-}
-body::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+    body::-webkit-scrollbar-thumb {
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        background-color: #393e4e;
+        transition: 0.2s !important;
+    }
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #2b2f3c;
+        }
 
 section {
     transition: 0.2s;
@@ -159,9 +159,17 @@ label {
     display: block;
 }
 
+.opacity-0{
+    opacity: 0;
+}
+
+/*Form-Control*/
+.Invalid {
+    border-color: #dc3545;
+}
 /*Cursor*/
 .pointer {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 

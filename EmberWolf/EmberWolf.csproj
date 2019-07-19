@@ -234,7 +234,11 @@
     <Content Include="Content\Media\Images\Bg\full-bloom.png" />
     <Content Include="Content\Media\Images\Kea.jpg" />
     <Content Include="Content\Media\Images\Misc\Avatar.png" />
+    <Content Include="Content\Media\Images\Tiles\Protest.jpg" />
+    <Content Include="Content\Media\Zeeco\Assets\Green Background.svg" />
+    <Content Include="Content\Media\Zeeco\Assets\Header-1.svg" />
     <Content Include="Content\Media\Zeeco\Assets\Moon.svg" />
+    <Content Include="Content\Media\Zeeco\Assets\Phone-Alt.svg" />
     <Content Include="Content\Media\Zeeco\Assets\Star-1.svg" />
     <Content Include="Content\Media\Zeeco\Assets\Star-2.svg" />
     <Content Include="Content\Media\Zeeco\Assets\Star.svg" />
@@ -315,6 +319,7 @@
     <Content Include="Scripts\JQuery\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\JQuery\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\JQuery\modernizr-2.8.3.js" />
+    <Content Include="Scripts\PageScripts\Index.js" />
     <Content Include="Scripts\Plugins\Masonry\masonry-docs.min.js" />
     <Content Include="Scripts\Plugins\Range\css\ion.rangeSlider.css" />
     <Content Include="Scripts\Plugins\Range\css\ion.rangeSlider.min.css" />
