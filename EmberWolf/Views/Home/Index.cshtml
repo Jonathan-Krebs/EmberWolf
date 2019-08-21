@@ -1,356 +1,291 @@
 ﻿@{
-    ViewBag.Title = "Zeeco - Do Good Effortlessly";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-
-    <style>
-        .bg-green-grad {
-            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00dea3+0,36acb8+100 */
-            background: #00dea3; /* Old browsers */
-            background: -moz-linear-gradient(top, #00dea3 0%, #36acb8 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, #00dea3 0%,#36acb8 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom, #00dea3 0%,#36acb8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dea3', endColorstr='#36acb8',GradientType=0 ); /* IE6-9 */
-        }
-
-        .bg-grey-grad {
-            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,f8f9fa+100 */
-            background: #ffffff; /* Old browsers */
-            background: -moz-linear-gradient(top, #ffffff 0%, #f8f9fa 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, #ffffff 0%,#f8f9fa 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom, #ffffff 0%,#f8f9fa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f9fa',GradientType=0 ); /* IE6-9 */
-        }
-
-        .bg-blue-grad {
-            background: linear-gradient(242.27deg, rgba(0, 209, 222, 0.64) 0%, rgba(67, 114, 169, 0.8) 90.29%);
-        }
-
-        .bg-dark-blue-grad {
-            background: linear-gradient(90deg, #2b2f3c 0%, #161a2a 100%);
-        }
-
-        .bg-dark-blue {
-            background: #2b2f3c;
-        }
-
-        .scroll-shift {
-            bottom: -40vh;
-        }
-
-        .highlight {
-            border-radius: 2px;
-            display: block;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0 12.0px 20.8px 12.0px;
-            border-color: transparent transparent #333 transparent;
-            position: absolute;
-        }
-
-        .highlight-body {
-            position: absolute;
-            top: 24px;
-            padding: 6px;
-            width: 100px;
-            right: -50px;
-            background: #e7e7e7;
-            border-radius: 6px;
-        }
-
-
-        .storyboard {
-            height: 100vh;
-            display: flex;
-            width: 100vw;
-            overflow: hidden;
-        }
-
-
-            .storyboard content {
-                min-width: 100vw;
-                padding: 3rem;
-                transition: 0.3s;
-            }
-
-                .storyboard content .story {
-                    height: calc(100vh - 6rem);
-                    transition: 0.3s;
-                }
-
-                .storyboard content.active {
-                    padding: 0px;
-                }
-
-                    .storyboard content.active .story {
-                        height: 100vh;
-                    }
-
-        .hero-input .form-control {
-            border-radius: 100px;
-            border: 2px solid #fff;
-            height: 42px;
-        }
-            .hero-input .form-control.Invalid {
-                border-color: #fff;
-                border-left-color: #dc3545
-            }
-
-        .hero-input .btn {
-            border-radius: 100px;
-            width: 100px;
-            margin-left: -100px;
-            height: 42px;
-            border: 2px solid #fff;
-        }
-
-        .hero-input {
-            position: relative;
-            z-index: 999;
-            border-radius: 100px;
-            box-shadow: 0px 2px 24px rgba(0,0,0,0.1);
-        }
-
-        #menu.open {
-            /*padding: 3rem;*/
-            /*background: #4a4d58;
-            transition: 0.4s;*/
-        }
-
-        footer {
-            background: #343740;
-        }
-
-        /*.text-secondary {
-            color: #36ACB8;
-        }*/
-
-        .btn-primary {
-            background: #00dea3;
-            border-color: #00dea3;
-        }
-
-        .btn-outline-primary {
-            color: #00dea3;
-            border-color: #00dea3;
-        }
-
-        .btn-outline-secondary {
-            color: #00D1DE;
-            border-color: #00D1DE;
-        }
-
-        .text-grey-1 {
-            color: #7A838D;
-        }
-
-        .text-grey-2 {
-            color: #99A3AE;
-        }
-
-        .Absolute-Center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .storyboard content .story-height {
-            height: calc(100vh - 10rem);
-            margin: 5rem 0rem;
-            transition: 0.2s;
-        }
-
-        .storyboard content.active .story-height {
-            height: calc(100vh - 6rem);
-            margin: 3rem 0rem;
-        }
-    </style>
-    <link href="~/Scripts/Plugins/Range/css/ion.rangeSlider.css" rel="stylesheet" />
+    ViewBag.Title = "Jon Krebs";
+    Layout = "~/Views/Shared/_Layout-Edit.cshtml";
 }
 
-<main role="main" id="Main">
-    <section id="Splash">
+<header class="navbar navbar-expand-lg navbar-light bg-white nav-down fixed-top Transition04">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div>
+                <img class="avatar" src="~/Content/Media/Images/Misc/Avatar.png" />
+            </div>
+            <a class="navbar-brand">Jon Krebs</a>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cover Letter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Work</a>
+                </li>
+                @*<li>
+                    <button class="btn btn-primary">Download CV</button>
+                </li>*@
+            </ul>
+        </div>
+    </div>
+</header>
 
-        <div class="w-full Vertical-Align-Parent bg-dark-blue-grad position-relative" style="height: 100vh;">
-            <img style="height: 28px; top: 32px; left: 48px;" class="position-absolute" src="~/Content/Media/Zeeco/Logo/Zeeco-Logo-Full-White.svg" />
-            <div class="container text-white">
-                <div class="row d-flex" style="height: 100vh;">
-                    <div class="col-md-6">
-                        <div class="Vertical-Align">
-                            <div class="mb-5">
-                                <h1>Do Good Effortlessly</h1>
-                                <h4 class="text-light">Remove your carbon footprint by planting forests and building renewable energy as you shop.</h4>
-                            </div>
-                            <div>
-                                <a href="#Intro" class="btn btn-outline-light border-round mr-2" style="width: 180px">Learn More</a>
-                                <button class="btn btn-outline-secondary border-round" onclick="OpenOptin()" style="width: 180px">Sign Up, Be a Hero</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-center">
-                        <img class="Vertical-Align" src="~/Content/Media/Zeeco/Assets/Header-1.svg" />
-                    </div>
-                </div>
+
+<main role="main" class="Altitude">
+    <section id="Intro" class="h-100vh">
+        <div class="img-cover hero" style="background-image: url('/Content/Media/Images/Kea.jpg');">
+            <div class="hero-overlay">
+
             </div>
         </div>
     </section>
 
-    <section id="Intro" class="position-relative h-100vh">
-        @*<header id="Header" class="top right-abs Transition04 w-100" style="z-index:99">
-                <nav class="py-1">
-                    <div class="container d-flex flex-column flex-md-row">
-
-                        <div class="right">
-                            <a class="py-2 d-none d-md-inline-block mr-4 text-white Transition02" href="#">Human Impact</a>
-                            <a class="py-2 d-none d-md-inline-block mr-4 text-white Transition02" href="#">Our Solution</a>
-                            <a class="py-2 d-none d-md-inline-block mr-4 text-white Transition02" href="#">Projects</a>
-                            @Html.Partial("_LoginPartial")
-                        </div>
-                    </div>
-                </nav>
-            </header>*@
-        <img class="top w-100" src="~/Content/Media/Zeeco/Assets/Green Background.svg" />
-        <div class="container">
-            <div class="row pt-5">
-                <div class="col-md-6">
-                    <div class="text-left text-white pt-5">
-                        <div class="mb-4">
-                            <h2>Our Mission</h2>
-                            <h5>
-                                To make carbon neutrality easy and affordable for everyone<br />
-                                without having to change the way you live your life.
-                            </h5>
-                        </div>
-                        <div class="mb-3">
-                            <h6 class="text-green">Sign up to get notified when we launch</h6>
-                        </div>
-                        <div class="w-400px">
-                            <div class="d-flex hero-input">
-                                <input class="form-control" onkeyup="ValidateEmail(this)" onchange="$('#EmailInput').val(value)" id="EmailInput-1" placeholder="Enter your email. Be a Hero" />
-                                <button class="btn btn-primary" onclick="OpenOptin('#EmailInput-1')">Join Us</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section id="Cover Letter">
+        <div class="container sm">
+            <h1>Cover Letter For Contoso Limited</h1>
+            <div class="text-block">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque urna nisl, mollis sed rhoncus a, luctus ut eros. Donec feugiat dignissim risus, ut dapibus quam sodales eu. Sed eget rutrum diam. Proin imperdiet porta orci, et commodo erat sollicitudin non. Nulla facilisi. Nullam facilisis commodo risus molestie vulputate. Fusce maximus, odio non maximus commodo, est velit varius nibh, vitae semper quam turpis sit amet diam. Duis nibh mauris, lobortis vel justo malesuada, fermentum maximus elit. Donec semper vel nisl sed dignissim. Cras sagittis sagittis urna.
+                    <br /><br />
+                    Donec lacinia vestibulum interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam mollis tincidunt urna, at posuere sem congue quis. Sed tincidunt vulputate velit dictum fringilla. Phasellus blandit cursus facilisis. Quisque tincidunt ornare urna, eu laoreet enim malesuada aliquam. Donec diam neque, ultrices at molestie ac, condimentum et est. Nulla nulla purus, aliquam nec euismod eu, facilisis eget dui.
+                    <br /><br />
+                    Nullam consectetur quam sed aliquam efficitur. Sed consequat lacinia arcu, in elementum sapien dictum vel. Morbi laoreet, lorem malesuada tincidunt pretium, lorem nibh bibendum nulla, nec gravida arcu diam semper sem. Cras non elit sagittis elit venenatis placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam tincidunt erat ipsum, a placerat diam efficitur et. Nullam eros libero, pharetra non pretium ac, fermentum vitae dolor. Nam pellentesque, urna vel volutpat dignissim, ante ipsum ultrices purus, nec congue massa nibh elit.
+                </p>
             </div>
         </div>
     </section>
 
-
-    <section class="position-relative">
-        <div class="container py-3">
-            <img class="center" src="~/Content/Media/Zeeco/Assets/Mission-Icon.svg" /><br />
-            <h2 class="text-center text-secondary ">The Easiest Way To Manage Your Environmental Impact</h2>
-            <h4 class="text-center text-grey-1"></h4>
-            <div class="row text-grey-2 pb-5">
-                <div class="col-md-4">
-                    <div class="p-3 text-center">
-                        <img src="~/Content/Media/Zeeco/Assets/Pill-1.svg" />
-                        <h5 class="text-center">Zeeco automaically calculates your CO2 footprint</h5>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-3 text-center">
-                        <img src="~/Content/Media/Zeeco/Assets/Pill-2.svg" />
-                        <h5 class="text-center">You choose how much you want to offset</h5>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-3 text-center">
-                        <img src="~/Content/Media/Zeeco/Assets/Pill-3.svg" />
-                        <h5 class="text-center">We invests in local eco projects to balance it</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section id="menu" style="height: calc(100vh - 6rem)">
-        <div class="p-5">
-            <div class="position-relative Vertical-Align-Parent" style="height: calc(100vh - 12rem)">
-                <div class="page-overlay-dark abs Vertical-Align-Parent" id="menu-overlay">
-                    <div class="Vertical-Align">
-                        <div class="container p-5">
-                            <h3 class="text-white">See How Zeeco can empower you to<br />neutralize your carbon footprint</h3><br />
-                            <button onclick="$('#menu-overlay').fadeOut(400); $('#menu').addClass('open')" class="btn btn-secondary btn-lg rounded"><span>Learn More</span></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex Vertical-Align w-100">
-                    <div class="img-tile w-100" onclick="OpenStory('Problem-Story')">
-                        <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Tiles/Menu-1.png')">
-                            <span class="img-tile-overlay"></span>
-                        </span>
-                        <div class="img-tile-body text-light">
-                            <h2>The Struggle</h2>
-                        </div>
-                    </div>
-
-                    <div class="img-tile w-100" onclick="OpenStory('Mission-Story')">
-                        <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Tiles/Menu-3.png')">
-                            <span class="img-tile-overlay"></span>
-                        </span>
-                        <div class="img-tile-body text-light">
-                            <h2>Our Solution</h2>
-                        </div>
-                    </div>
-
-                    <div class="img-tile w-100" onclick="OpenOptin()">
-                        <span class="img-tile-bg img-cover bg-dark05">
-                            <span class="img-tile-overlay"></span>
-                        </span>
-                        <div class="img-tile-body text-light">
-                            <h2>Join us. Be a Hero</h2>
-                        </div>
-                    </div>
-
-                    @*<div class="img-tile w-100" onclick="OpenStory('Signup-Story')">
-                            <span class="img-tile-bg img-cover bg-dark05">
-                                <span class="img-tile-overlay"></span>
-                            </span>
-                            <div class="img-tile-body text-light">
-                                <h2>Join Us</h2>
-                            </div>
-                        </div>*@
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="position-relative h-100vh noscroll">
-        <img class="bottom" style="z-index: 1;" src="~/Content/Media/Zeeco/Assets/Background-2.svg" />
-        <div class="container">
+    <section>
+        <div class="container sm">
+            <h1>About Me</h1>
             <div class="row">
-                <div class="col-md-6 h-100vh position-relative">
-                    <div class="">
-                        <div class="Absolute-Center position-absolute" style="width: 100%; height: 100vh; z-index: 1">
-                            <img src="~/Content/Media/Zeeco/Assets/Phone-Alt.svg">
+                <div class="col-8">
+                    <div class="d-flex text-block">
+                        <div class="mr-4">
+                            <h4 class="icon-anchor"></h4>
                         </div>
-                        <div class="Absolute-Center position-absolute" style="width: 100%; height: 100vh; z-index: -1;">
-                            <img src="/Content/Media/Zeeco/Assets/Phone-Outline.svg">
+                        <div>
+                            <h4>Profile</h4>
+                            <p>
+                                I’m looking to find a Challenge and Freedom working on a project I am passionate about to make a difference to the world. I am an experienced Web Developer, and Creative. Self motivated and driven to learn more and experience life. I won’t fit into a cookie cutter job, and that's what I offer.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-block">
+                        <div class="mr-4">
+                            <h4 class="icon-briefcase"></h4>
+                        </div>
+                        <div>
+                            <h4>Employment History</h4>
+                            <div class="mb-4">
+                                <h6>Web Developer at <a class="subtle-link" href="https://gettrail.com" target="_blank">Trail</a>, Auckland</h6>
+                                <label>September 2017 - Ongoing</label>
+                                <p>
+                                    I build a nice CRM system for financial advisers to manage their business more effectively.
+                                </p>
+                            </div>
+                            <div class="mb-4">
+                                <h6>Programmer at <a class="subtle-link" href="https://irefi.co.nz" target="_blank">iRefi</a>, Auckland</h6>
+                                <label>May 2015 - September 2017</label>
+                                <p>
+                                    Worked on building an online lead generation system for a Finance business, then building an in house CRM system
+                                </p>
+                            </div>
+                            <div class="mb-4">
+                                <h6>Junior Developer at <a class="subtle-link" href="http://markerdigital.io/" target="_blank">MarkerMetro</a>, Auckland</h6>
+                                <label>June 2013 - May 2015</label>
+                                <p>
+                                    Quality control and junior development on mobile apps
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex text-block">
+                        <div class="mr-4">
+                            <h4 class="icon-graduation"></h4>
+                        </div>
+                        <div>
+                            <h4>Education</h4>
+                            <div class="mb-4">
+                                <h6>Be Hons Mechanical Engineering at The University of Auckland</h6>
+                                <label>January 2014 - September 2017</label>
+                            </div>
+                            <div class="mb-4">
+                                <h6>Macleans College</h6>
+                                <label>January 2009 - September 2013</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex text-block">
+                        <div class="mr-4">
+                            <h4 class="icon-graduation"></h4>
+                        </div>
+                        <div>
+                            <h4>Extra Curricular</h4>
+                            <div class="mb-4">
+                                <h6>Long distance Running</h6>
+                                <label>January 2014 - September 2017</label>
+                            </div>
+                            <div class="mb-4">
+                                <h6>Hackathons</h6>
+                                <label>January 2009 - September 2013</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 Vertical-Align-Parent h-100vh position-relative" style="z-index: 1;">
-                    <div class="Vertical-Align">
+                <div class="col-4">
+                    <div class="text-block">
+                        <h4>Details</h4>
+                        <h6>Phone: 021 154 7194</h6>
+                        <h6>Email: jon_krebs@hotmail.com</h6>
+                        <h6>Licence: Full</h6>
+                    </div>
+                    <div class="text-block">
+                        <h4>Skills</h4>
                         <div class="mb-4">
-                            <h2 class="text-secondary">
-                                Learn More About Your Impact
-                            </h2><br />
-                            <h5 class="text-grey-1">Zeeco will analyse your personal situation and expenses to calculate your individual footprint and help you work towareds reducing it.</h5>
-                        </div>
-                        <div class="mb-3">
-                            <h6 class="text-secondary">Sign up to get notified when we launch</h6>
-                        </div>
-                        <div class="w-400px">
-                            <div class="d-flex hero-input">
-                                <input class="form-control" onkeyup="ValidateEmail(this)" onchange="$('#EmailInput').val(value)" id="EmailInput-2" placeholder="Enter your email. Be a Hero" />
-                                <button class="btn btn-primary" onclick="OpenOptin('#EmailInput-2')">Join Us</button>
+                            <h6>Dreaming</h6>
+                            <div class="progress" style="height: 3px;">
+                                <div class="progress-bar bg-primary" style="width: 100%"></div>
                             </div>
+                        </div>
+                        <div class="mb-4">
+                            <h6>Idea Generation</h6>
+                            <div class="progress" style="height: 3px;">
+                                <div class="progress-bar bg-primary" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h6>Web Design</h6>
+                            <div class="progress" style="height: 3px;">
+                                <div class="progress-bar bg-primary" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h6>Graphic Design</h6>
+                            <div class="progress" style="height: 3px;">
+                                <div class="progress-bar bg-primary" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                        <h4>Links</h4>
+                        @*<ul class="list-unstyled m-0">
+                                <li class="list-item">
+                                    <a>
+                                        <span class="badge badge-info">
+                                            <span class="icon-social-facebook"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a>
+                                        <span class="badge badge-info">
+                                            <span class="icon-social-linkedin"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a>
+                                        <span class="badge badge-info">
+                                            <span class="icon-social-behance"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a>
+                                        <span class="badge badge-info">
+                                            <span class="icon-social-dribbble"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>*@
+                    </div>
+                    <div class="text-block">
+                        <h4>Interests</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-alt">
+        <div class="container">
+            <h1>Portfolio</h1>
+            <div class="row" id="PortfolioGrid">
+                <div class="img-block pointer">
+                    <div class="img-block-body">
+                        <img src="~/Content/Media/Images/Portfolio/Img-11.jpg" />
+                        <div class="img-block-overlay">
+                            <div class="img-block-text">Text</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-block pointer">
+                    <div class="img-block-body">
+                        <img src="~/Content/Media/Images/Portfolio/Img-1.jpg" />
+                        <div class="img-block-overlay">
+                            <div class="img-block-text">Text</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-block pointer">
+                    <div class="img-block-body">
+                        <img src="~/Content/Media/Images/Portfolio/Img-7.jpg" />
+                        <div class="img-block-overlay">
+                            <div class="img-block-text">Text</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-block pointer">
+                    <div class="img-block-body">
+                        <img src="~/Content/Media/Images/Portfolio/Img-6.jpg" />
+                        <div class="img-block-overlay">
+                            <div class="img-block-text">Text</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-block pointer">
+                    <div class="img-block-body">
+                        <img src="~/Content/Media/Images/Portfolio/Img-12.jpg" />
+                        <div class="img-block-overlay">
+                            <div class="img-block-text">Text</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-block pointer">
+                    <div class="img-block-body">
+                        <img src="~/Content/Media/Images/Portfolio/Img-13.jpg" />
+                        <div class="img-block-overlay">
+                            <div class="img-block-text">Text</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-block pointer">
+                    <div class="img-block-body">
+                        <img src="~/Content/Media/Images/Portfolio/Img-5.jpg" />
+                        <div class="img-block-overlay">
+                            <div class="img-block-text">Text</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-block pointer">
+                    <div class="img-block-body">
+                        <img src="~/Content/Media/Images/Portfolio/Img-2.jpg" />
+                        <div class="img-block-overlay">
+                            <div class="img-block-text">Text</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-block pointer">
+                    <div class="img-block-body">
+                        <img src="~/Content/Media/Images/Portfolio/Img-8.jpg" />
+                        <div class="img-block-overlay">
+                            <span>Text</span>
                         </div>
                     </div>
                 </div>
@@ -358,175 +293,361 @@
         </div>
     </section>
 
-    @*<section id="1" class="position-relative active">
-            <div class="bg-green-grad h-100vh bg-green-grad">
-                <div class="container">
-                    <div style="padding-top: 20vh" class="center text-white">
-                        <img src="~/Content/Media/Zeeco/Zeeco-Logo-White.svg" class="mb-4" />
-                        <div class="mb-4">
-                            <h3>Do Good Effortlessly</h3>
-                            <h5>Reduce your carbon footprint, earn rewards, be a hero</h5>
-                        </div>
-                        <div class="w-400px center">
-                            <div class="d-flex hero-input">
-                                <input class="form-control" />
-                                <button class="btn btn-primary">Join</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="scroll-shift position-absolute" style="width: calc(100vw - 6rem)">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1261" fill="none">
-                            <path d="M367.949 495.387C363.207 491.047 362.084 476.245 362.084 476.245C362.084 476.245 376.835 475.55 381.519 479.629C386.484 483.952 383.831 496.418 383.831 496.418C383.831 496.418 372.554 499.602 367.949 495.387Z" fill="white" />
-                            <path d="M380.566 453.784C379.466 447.418 387.589 435.043 387.589 435.043C387.589 435.043 399.65 443.646 400.862 449.77C402.148 456.261 392.468 464.45 392.468 464.45C392.468 464.45 381.633 459.965 380.566 453.784Z" fill="white" />
-                            <path d="M404.578 462.289C408.839 457.914 421.972 458.495 421.972 458.495C421.972 458.495 420.899 473.667 416.881 478.003C412.623 482.599 401.348 479.107 401.348 479.107C401.348 479.107 400.441 466.537 404.578 462.289Z" fill="white" />
-                            <path d="M392.554 465.288C392.554 465.288 391.796 467.727 391.356 469.327C388.889 478.292 388.078 490.146 388.006 501.25L384.5 496.587L387.192 502.789C387.729 504.026 388.008 505.351 388.025 506.7C388.225 522.807 389.558 549 389.558 549H392.404H395.249C395.249 549 397.725 513.484 396.788 491.871C396.721 490.321 396.987 488.777 397.599 487.35L401 479.423L396.382 485.481C395.889 479.646 395.06 474.08 393.752 469.327C393.311 467.727 392.554 465.288 392.554 465.288Z" fill="white" />
-                            <path d="M499 582.5C499 582.5 514.273 481.825 507.013 453.078C500.032 425.438 472.979 388.5 472.979 388.5L513.994 437.37C513.994 437.37 520.975 388.5 517.485 356.211C513.994 323.922 502.649 300.36 502.649 300.36C502.649 300.36 522.503 330.904 527.957 352.72C533.411 374.537 531.447 437.37 531.447 437.37L572.882 391.707C573.718 390.786 574.078 389.528 573.855 388.303L563.736 332.649L581.1 385.567C581.627 387.173 583.376 388.027 584.967 387.454L647.513 364.938L583.34 395.29C583.071 395.417 582.832 395.562 582.6 395.748C578.92 398.697 546.016 425.633 536.683 453.078C527.906 478.89 531.447 582.5 531.447 582.5H499Z" fill="white" />
-                            <path d="M457.741 414.194C447.608 418.921 423.275 410.72 423.275 410.72C423.275 410.72 432.193 386.412 441.87 381.603C452.128 376.504 470.174 389.226 470.174 389.226C470.174 389.226 467.58 409.605 457.741 414.194Z" fill="white" />
-                            <path d="M448.659 367.908C446.74 356.846 460.918 335.341 460.918 335.341C460.918 335.341 481.967 350.292 484.084 360.934C486.328 372.214 469.433 386.443 469.433 386.443C469.433 386.443 450.522 378.65 448.659 367.908Z" fill="white" />
-                            <path d="M474.322 312.856C463.433 310.119 449.536 288.433 449.536 288.433C449.536 288.433 471.745 275.265 482.33 277.651C493.549 280.18 499.695 301.396 499.695 301.396C499.695 301.396 484.896 315.515 474.322 312.856Z" fill="white" />
-                            <path d="M494.152 270.264C497.998 259.716 521.002 248.129 521.002 248.129C521.002 248.129 531.809 271.577 528.345 281.859C524.673 292.758 502.935 296.683 502.935 296.683C502.935 296.683 490.418 280.507 494.152 270.264Z" fill="white" />
-                            <path d="M533.851 327.699C526.638 319.094 528.106 293.379 528.106 293.379C528.106 293.379 553.816 295.744 560.988 303.885C568.591 312.515 561.121 333.302 561.121 333.302C561.121 333.302 540.854 336.054 533.851 327.699Z" fill="white" />
-                            <path d="M638.277 333.968C641.629 323.875 662.674 314.737 662.674 314.737C662.674 314.737 672.546 339.255 669.546 349.101C666.365 359.538 646.018 362.708 646.018 362.708C646.018 362.708 635.021 343.768 638.277 333.968Z" fill="white" />
-                            <path d="M572.599 305.684C580.036 298.082 602.957 299.091 602.957 299.091C602.957 299.091 601.085 325.456 594.072 332.991C586.639 340.978 566.961 334.91 566.961 334.91C566.961 334.91 565.378 313.066 572.599 305.684Z" fill="white" />
-                            <path d="M679.6 366.631C688.481 372.482 691.861 395.175 691.861 395.175C691.861 395.175 665.623 398.364 656.889 392.917C647.631 387.144 649.835 366.67 649.835 366.67C649.835 366.67 670.976 360.95 679.6 366.631Z" fill="white" />
-                            <path d="M682.872 342.46C689.894 341.016 702.323 350.222 702.323 350.222C702.323 350.222 691.336 364.25 684.576 365.817C677.411 367.478 668.702 356.668 668.702 356.668C668.702 356.668 676.053 343.863 682.872 342.46Z" fill="white" />
-                            <path d="M560.266 285.678C562.526 278.874 576.714 272.714 576.714 272.714C576.714 272.714 583.369 289.243 581.346 295.881C579.202 302.917 565.485 305.054 565.485 305.054C565.485 305.054 558.071 292.285 560.266 285.678Z" fill="white" />
-                            <path d="M426.577 378.331C420.59 374.387 418.311 359.088 418.311 359.088C418.311 359.088 436 356.938 441.888 360.61C448.129 364.502 446.643 378.305 446.643 378.305C446.643 378.305 432.391 382.161 426.577 378.331Z" fill="white" />
-                            <path d="M470.21 273.611C464.223 269.667 461.944 254.368 461.944 254.368C461.944 254.368 479.632 252.218 485.52 255.89C491.762 259.782 490.276 273.585 490.276 273.585C490.276 273.585 476.023 277.441 470.21 273.611Z" fill="white" />
-                            <path d="M2003.71 160H1987.29L1978 601H2013L2003.71 160Z" fill="white" />
-                            <path d="M1973.37 176.74L1978.98 161.295C1979.63 159.519 1979.48 157.55 1978.57 155.894C1976.51 152.146 1971.46 151.344 1968.34 154.269L1881.78 235.332C1880.81 236.244 1880.78 237.782 1881.73 238.725C1882.48 239.478 1883.64 239.634 1884.57 239.107L1954.36 199.283C1963.17 194.258 1969.9 186.269 1973.37 176.74Z" fill="white" />
-                            <path d="M2032.77 150.374L2016.59 153.233C2014.73 153.561 2013.1 154.677 2012.12 156.294C2009.9 159.954 2011.73 164.721 2015.83 165.963L2129.31 200.394C2130.59 200.782 2131.93 200.035 2132.27 198.746C2132.55 197.717 2132.1 196.632 2131.18 196.095L2061.8 155.564C2053.05 150.45 2042.76 148.61 2032.77 150.374Z" fill="white" />
-                            <path d="M1982.1 112.488L1992.67 125.075C1993.88 126.522 1995.67 127.375 1997.55 127.414C2001.83 127.503 2005.05 123.537 2004.08 119.371L1977.15 3.87643C1976.85 2.57675 1975.53 1.78615 1974.24 2.13155C1973.21 2.40702 1972.5 3.3362 1972.49 4.40054L1972.08 84.7549C1972.03 94.8944 1975.58 104.723 1982.1 112.488Z" fill="white" />
-                            <path d="M2022 146.5C2022 160.583 2010.58 172 1996.5 172C1982.42 172 1971 160.583 1971 146.5C1971 132.417 1982.42 121 1996.5 121C2010.58 121 2022 132.417 2022 146.5Z" fill="white" />
-                            <path d="M2193.92 246.111H2180.26L2172.53 613H2201.65L2193.92 246.111Z" fill="white" />
-                            <path d="M2168.68 260.038L2173.35 247.189C2173.89 245.711 2173.76 244.073 2173 242.696C2171.29 239.577 2167.09 238.91 2164.49 241.343L2092.48 308.784C2091.67 309.543 2091.65 310.822 2092.44 311.607C2093.06 312.233 2094.03 312.363 2094.8 311.924L2152.86 278.793C2160.19 274.613 2165.79 267.966 2168.68 260.038Z" fill="white" />
-                            <path d="M2218.1 238.103L2204.63 240.481C2203.09 240.755 2201.73 241.683 2200.92 243.028C2199.07 246.073 2200.59 250.039 2204 251.073L2298.41 279.717C2299.47 280.04 2300.59 279.418 2300.88 278.346C2301.11 277.49 2300.74 276.587 2299.97 276.141L2242.25 242.421C2234.96 238.166 2226.41 236.636 2218.1 238.103Z" fill="white" />
-                            <path d="M2175.94 206.584L2184.74 217.056C2185.75 218.26 2187.23 218.969 2188.8 219.002C2192.36 219.076 2195.03 215.777 2194.23 212.31L2171.83 116.225C2171.57 115.144 2170.48 114.486 2169.4 114.773C2168.55 115.003 2167.95 115.776 2167.95 116.661L2167.61 183.512C2167.57 191.947 2170.52 200.124 2175.94 206.584Z" fill="white" />
-                            <path d="M2209.14 234.88C2209.14 246.597 2199.64 256.095 2187.92 256.095C2176.21 256.095 2166.71 246.597 2166.71 234.88C2166.71 223.164 2176.21 213.666 2187.92 213.666C2199.64 213.666 2209.14 223.164 2209.14 234.88Z" fill="white" />
-                        </svg>
-                    </div>
-                    <div class="scroll-shift position-absolute" style="width: calc(100vw - 6rem)">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 826" fill="none">
-                            <path d="M0 8.00003C0 8.00003 101.052 77.6069 288 92C553.709 112.457 873.047 -35.3072 1136 8.00003C1356.43 44.3041 1428.1 255.229 1651.5 256C1853.67 256.698 1933.21 106.411 2129 56C2233.08 29.2003 2400 8.00003 2400 8.00003V825.5H0V8.00003Z" fill="white" />
-                        </svg>
-                    </div>
+    <footer class="py-4">
+        <div class="container">
+            <div class="text-center">
+                <h5>Jon Krebs</h5>
+                <h6>Maker</h6>
+                <div class="">
+                    <span class="social-badge fb"></span>
+                    <span class="social-badge ln"></span>
+                    <span class="social-badge be"></span>
+                    <span class="social-badge dr"></span>
                 </div>
             </div>
-        </section>*@
-
-
-    <footer class="p-4">
-        <div class="container text-white-50">
-            <p class="mb-0">&copy; @DateTime.Now.Year - Zeeco App</p>
         </div>
     </footer>
 </main>
 
-<div class="storyblock" hidden id="Problem-Story">
-    @Html.Partial("~/Views/Home/Story.cshtml")
-</div>
-
-<div class="storyblock" hidden id="Mission-Story">
-    @Html.Partial("~/Views/Home/Mission.cshtml")
-</div>
-
-<div class="storyblock" hidden id="Solution-Story">
-    @Html.Partial("~/Views/Home/Solution.cshtml")
-</div>
-
-<div hidden id="Optin" class="page-overlay">
-    <div class="p-3 fixed-top">
-        <h1 onclick="$('#Optin').fadeOut(200)" class="close float-left text-white">&times;</h1>
-    </div>
-    <div class="row">
-        <div class="col-5 h-100vh Vertical-Align-Parent bg-dark-blue">
-            <div class="p-5 Vertical-Align text-white">
-                <h3>Zeeco is still under development. Sign up now and we will let you know when we launch.</h3>
+<div class="modal fade lightbox" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="lightboxmodal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-wide">
+            <div class="modal-header">
+                <div class="w-full">
+                    <div class="flex">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Series title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <p class="m-0">Overview about what this series of work is about.</p>
+                </div>
             </div>
-        </div>
-        <div class="col-7 h-100vh Vertical-Align-Parent">
-            <div class="p-5 Vertical-Align">
-                <div class="mb-4">
-                    <label>How much of your footprint would you like to offset each month?</label>
-                    <div class="mb-3">
-                        <input class="js-range-slider" id="ValueRange" />
+            <div class="modal-body">
+                @* Add in a carousel for different images in this series of work *@
+                <div class="row">
+                    <div class="col-sm-8">
+                        <img class="mw-100" src="~/Content/Media/Images/Portfolio/img-1.jpg" />
                     </div>
-                    <div class="position-relative">
-                        <span class="position-absolute"></span>
-                        <span class="position-absolute"></span>
-                        <span class="position-absolute"></span>
+                    <div class="col-sm-4">
+                        <h6>Piece Title</h6>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe Photoshop CS 2</li>
+                            <li>Adobe InDesign</li>
+                        </ul>
+                        <p>
+                            This piece demonstrates something great about me and here are the words I would like to use to describe waht it is and how I made it.
+                        </p>
                     </div>
                 </div>
-                <div class="mb-4">
-                    <label>What type of projects would you most like to support to offset your footprint?</label>
-                    <select class="form-control" id="ProjectType" onchange="ValidateNotBlank()" >
-                        <option value="">Please Select</option>
-                        <option>Reforestation</option>
-                        <option>Renewable Energy</option>
-                        <option>Energy Efficency</option>
-                    </select>
-                </div>
-                <div class="mb-4">
-                    <label>What is your email address</label>
-                    <input class="form-control" id="EmailInput" onkeypress="ValidateEmail(this)" type="email" />
-                </div>
-                <button class="btn btn-outline-primary border-round" onclick="Optin()">Sign Up</button>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
 </div>
 
 
-<div style="display: none" id="ScrollWheel">
+@*<div class="carousel slide" id="PortfolioCarousel" data-ride="carousel">
+        <div class="carousel-inner pb-4">
+            <div class="carousel-item active">
+
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-6.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-7.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-8.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-9.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-10.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-11.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-12.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="img-tile">
+                                <span class="img-tile-bg img-cover" style="background-image: url('/Content/Media/Images/Portfolio/img-13.jpg')">
+                                    <span class="img-tile-overlay"></span>
+                                </span>
+                                <div class="img-tile-body text-light">
+                                    <h2>Text</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#PortfolioCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#PortfolioCarousel" data-slide-to="1"></li>
+            <li data-target="#PortfolioCarousel" data-slide-to="2"></li>
+        </ol>
+    </div>*@
+
+@*<div hidden id="SectionIndicators">
+        <a href="#Intro" class="section-indicator active"><span>Intro</span></a>
+        <a href="#Portfolio" class="section-indicator"><span>Portfolio</span></a>
+        <a href="#About-Me" class="section-indicator"><span>About Me</span></a>
+    </div>*@
+
+<div hidden id="ScrollWheel" class="mobile-hide">
     <svg width="26px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-        <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff; stroke-width:30px;" />
-        <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none; stroke:#fff; stroke-width:12px;" />
+        <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#4800ff;stroke-width:30px;" />
+        <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:rgba(0, 0, 0, 0.40);stroke-width:12px;" />
     </svg>
 </div>
 
 
 
 
-
-
 @section Scripts{
-    <script src="~/Scripts/Plugins/Range/js/ion.rangeSlider.js"></script>
+    <script src="~/Scripts/Plugins/Masonry/masonry-docs.min.js"></script>
     <script src="~/Scripts/Plugins/Scrollify/Scrollify.js"></script>
-    <script src="~/Scripts/PageScripts/Index.js"></script>
-
     <script>
+
+
         $(function () {
+            //Masonry
+            $('#PortfolioGrid').masonry({
+                percentPosition: true
+            })
+        });
 
-            $(".js-range-slider").ionRangeSlider({
-                skin: "round",
-                type: "double",
-                min: 0,
-                max: 20,
-                from: 2.5,
-                to: 7.5,
-                grid_snap: true,
-                step: 0.5,
-                prefix: "€"
-            });
-
-            $(".js-range-slider").on("change", function () {
-                var $inp = $(this);
-                var Value = parseFloat($inp.data("to")); // reading input value
-                console.log(Value)
-                var CO2Offset = Value / 10.0
-                $('#OffsetValue').html(CO2Offset)
-            });
+        function ScrollToSection(elm) {
+            Scrolling = true;
+            $('section.active').removeClass('active');
+            $('html, body').animate({
+                scrollTop: $(elm).offset().top
+            }, 1000);
 
             setTimeout(function () {
-                $('#ScrollWheel').fadeIn(200);
-
-                setTimeout(function () {
-                    $('#ScrollWheel').fadeOut(200);
-                }, 5000)
+                $('.section-indicator.active').removeClass('active')
+                $('a.section-indicator[href="#' + $(elm).attr('id') + '"]').addClass('active');
+                $(elm).addClass('active');
+                Scrolling = false;
             }, 1000)
-        })
+        }
+
+        function CheckScrollPosition(elm) {
+            var scrollTop = $(elm).scrollTop();
+            var windowHeight = window.innerHeight;
+            var elmScrollHeight = $(elm)[0].scrollHeight;
+            var Delta = (windowHeight - elmScrollHeight)
+
+            if (scrollTop == 0 && (Delta < 1 && Delta > -1)) {
+                return 0;
+            }
+            else if ((scrollTop + windowHeight + 2) >= elmScrollHeight) {
+                return 1;
+            } else if (scrollTop <= 0) {
+                return 2;
+            } else {
+                return null;
+            }
+        }
+
+        //Smooth Scrolling
+
+        $('a.section-indicator')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $('section.active').removeClass('active');
+                            $target.addClass('active')
+
+                            $('.section-indicator.active').removeClass('active')
+                            $('a.section-indicator[href="#' + $target.attr('id') + '"]').addClass('active');
+
+                            $target.focus();
+
+
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+
+        // Sticky navbar
+        // =========================
+        $(document).ready(function () {
+
+            // Custom function which toggles between sticky class (is-sticky)
+            var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
+                var stickyHeight = sticky.outerHeight();
+                var stickyTop = stickyWrapper.offset().top;
+                if (scrollElement.scrollTop() >= stickyTop) {
+                    if (!sticky.hasClass('is-sticky')) {
+                        stickyWrapper.height(stickyHeight);
+                        sticky.addClass("is-sticky");
+
+                    }
+                }
+                else {
+                    sticky.removeClass("is-sticky");
+                    stickyWrapper.height('auto');
+                }
+            };
+
+            // Find all data-toggle="sticky-onscroll" elements
+            $('[data-toggle="sticky-onscroll"]').each(function () {
+                var sticky = $(this);
+                var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+                sticky.before(stickyWrapper);
+                sticky.addClass('sticky');
+
+                // Scroll & resize events
+                $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+                    stickyToggle(sticky, stickyWrapper, $(this));
+                });
+
+                // On page load
+                stickyToggle(sticky, stickyWrapper, $(window));
+            });
+        });
+
+
+        // Hide header on scroll down
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('header').outerHeight();
+
+        $(window).scroll(function (event) {
+            didScroll = true;
+            if ($(window).scrollTop() != 0) {
+                $('header').addClass('shadow-lg');
+            } else {
+                $('header').removeClass('shadow-lg');
+            }
+        });
+
+        setInterval(function () {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+
+            // Make scroll more than delta
+            if (Math.abs(lastScrollTop - st) <= delta)
+                return;
+
+            // If scrolled down and past the navbar, add class .nav-up.
+            if (st > lastScrollTop && st > navbarHeight) {
+                // Scroll Down
+                if ($(window).scrollTop() > 650) {
+                    $('header').removeClass('nav-down').addClass('nav-up');
+                }
+            } else {
+                // Scroll Up
+                if (st + $(window).height() < $(document).height()) {
+                    $('header').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+
+            lastScrollTop = st;
+        }
+
     </script>
 }

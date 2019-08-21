@@ -45,12 +45,12 @@ function OpenMain() {
         $('#Main').fadeIn(200);
         $('.storyblock').hide().removeClass('open').removeClass('opacity-0');
         $('content.active').removeClass('active');
-        $('.storyblock').find('content').first().addClass('active'); 
+        //$('.storyblock').find('content').first().addClass('active'); 
     }, 200)
 };
 
 function OpenOptin(elm) {
-    if (elm != null && elm != underfined) {
+    if (elm != null && elm != undefined) {
         if (ValidateEmail(elm)) {
             $('#Optin').fadeIn(200);
         }
@@ -79,6 +79,7 @@ function ScrollToStory(elm) {
     $('content.active').removeClass('active');
     var width = $(window).outerWidth();
     var count = $(elm).prevAll().length;
+    console.log(elm);
     console.log(count);
     console.log(width);
     $('.storyblock.open .storyboard').animate({
@@ -124,6 +125,8 @@ $(window).bind('mousewheel', function (e) {
             }
             else { // down
                 var scrollTo = $(elm).next('content');
+                this.console.log(elm);
+                this.console.log(scrollTo);
                 if ($(scrollTo).length != 0) { //next elm
                     ScrollToStory(scrollTo)
                 }

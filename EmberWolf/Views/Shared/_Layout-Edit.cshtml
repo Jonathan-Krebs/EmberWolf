@@ -13,7 +13,7 @@
             <div class="editor-menu">
                 <div class="editor-menu-sidebar">
                     <span class="menu-item">
-                        <span style="width: 10px;height: 10px;background: #333;border-radius: 100%;display: block;margin: 0px auto;" ></span>
+                        <span style="width: 10px;height: 10px;background: #333;border-radius: 100%;display: block;margin: 0px auto;"></span>
                     </span>
                     <a href="#" class="menu-item text-nodecoration active">
                         <span class="icon-grid"></span>
@@ -30,31 +30,30 @@
                 </div>
                 <div class="editor-menu-main">
                     @Html.Partial("~/Views/Shared/Edit-Menu.cshtml")
-                </div>
-                <div class="editor-menu-bottom">
-                    <span title="Close Menu" data-toggle="tooltip" onclick="$('.editor-body').removeClass('open');"><span class="icon-arrow-left-circle pointer text-primary"></span></span>
-                    <div class="ml-auto">
-                        <span class="icon-screen-desktop mr-2"></span>
-                        <span class="icon-screen-tablet mr-2"></span>
-                        <span class="icon-screen-smartphone"></span>
+                    <div class="editor-menu-bottom">
+                        <span title="Close Menu" class="close-btn pointer" data-toggle="tooltip" onclick="$('.editor-body').removeClass('open');"><span class="icon-arrow-left-circle pointer text-white"></span></span>
+                        <div class="ml-auto p-2">
+                            <span class="display-icon icon-screen-desktop mr-2 pointer text-primary" onclick="SetLayout('Desktop', this)"></span>
+                            <span class="display-icon icon-screen-tablet mr-2 pointer" onclick="SetLayout('Tablet', this)"></span>
+                            <span class="display-icon icon-screen-smartphone pointer" onclick="SetLayout('Mobile', this)"></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="editor-frame styled-scroll">
+        <div id="editor-frame" class="editor-frame styled-scroll Desktop-Layout">
             <div class="editor-background">
 
             </div>
             <div class="editor-content">
                 <div class="editor-content-inner">
-                    @*<iframe frameborder="0" style="width: 100%; height: 100vh" src="~/home/index"></iframe>*@
                     @RenderBody()
                 </div>
             </div>
         </div>
         <div class="menu-toggle">
             <div class="open-show">
-               
+
             </div>
             <div class="open-hide">
                 <span title="Open Menu" data-toggle="tooltip" onclick="$('.editor-body').addClass('open');"><span class="icon-arrow-right-circle pointer text-primary"></span></span>
@@ -62,12 +61,18 @@
         </div>
     </div>
 
-   
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/Plugins/Sortable/Sortable.js"></script>
     <script>
+
+        $(function () {
+            var elm = document.getElementById('Main-Items-List');
+            var sortable = Sortable.create(elm);
+        })
         function OpenMenu(Menu) {
             if ($(".menu.open").data('menu') == 'Main') {
                 $(".menu.open").removeClass('open').addClass('closed-left');
@@ -76,6 +81,20 @@
                 $(".menu.open").removeClass('open').addClass('closed-right');
                 $("[data-menu='" + Menu + "']").addClass('open').removeClass('closed-left');
             }
+        }
+
+        function SetLayout(type, elm) {
+            $('#editor-frame').removeClass('Desktop-Layout Tablet-Layout Mobile-Layout');
+            $('#editor-frame').addClass(type + '-Layout');
+            if (type != "Desktop") {
+                $('#editor-frame').find('.editor-content-inner').addClass('styled-scroll');
+            } else {
+                $('#editor-frame').find('.editor-content-inner').removeClass('styled-scroll');
+            }
+
+            $('.display-icon').not(elm).removeClass('text-primary');
+            $(elm).addClass('text-primary');
+
         }
     </script>
 </body>

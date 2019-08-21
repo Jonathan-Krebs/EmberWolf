@@ -55,3 +55,29 @@
 
 .Resen .nav-avatar {
   border-radius: 100%; }
+
+.editor-body.open .Tablet-Layout {
+  overflow: hidden; }
+  .editor-body.open .Tablet-Layout .editor-content-inner {
+    max-width: 800px;
+    max-height: 1040px;
+    overflow: auto;
+    margin: calc((100vh - (1040px * 0.64)) / 2) auto; }
+  .editor-body.open .Tablet-Layout header {
+    max-width: 800px;
+    position: initial !important; }
+  .editor-body.open .Tablet-Layout .editor-content {
+    transform: scale(0.64); }
+
+.editor-body.open .Mobile-Layout {
+  overflow: hidden; }
+  .editor-body.open .Mobile-Layout .editor-content-inner {
+    max-width: 375px;
+    max-height: 812px;
+    overflow: auto;
+    margin: calc((100vh - (812px * 0.84)) / 2) auto; }
+  .editor-body.open .Mobile-Layout header {
+    max-width: 375px;
+    position: initial !important; }
+  .editor-body.open .Mobile-Layout .editor-content {
+    transform: scale(0.84); }

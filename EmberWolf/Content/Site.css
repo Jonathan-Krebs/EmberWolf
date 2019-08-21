@@ -183,4 +183,12 @@ label {
     .mobile-show {
         display: block !important;
     }
+    .mobile-bg-dark-blue{
+        background: #2b2f3c;
+    }
+
+    .mobile-padding{
+        padding: 3rem;
+        height: unset;
+    }
 }
